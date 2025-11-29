@@ -897,6 +897,170 @@
         </style>
 
         <!--网页主体部分-->
+<!--test-->
+<div class="sep-body sep-inner-body">
+			<div class="bread inner-bread bg-f9">
+				<div class="sep-container">
+					<div class="bread-icon iconfont">
+						&#xe8ff;
+					</div>
+					<ul class="breadcrumb bread-ul"><li><a href="/">Home</a></li><li><a href="/contact-us/" title="Contact Us">Contact Us</a></li></ul><script type="application/ld+json">{"@context":"http:\/\/schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https:\/\/www.altramarine-supply.com\/","name":"Home"}}]}</script>				</div>
+			</div>
+
+		<div class="bq-index-contact inner-contact">
+		
+			<div class="bq-contact-main">
+				<div class="bq-sep-container sep-container">
+					<div class="top-title ">
+						<h1 class="title gtj-ff-bold wow fadeInUp  animated">
+							Contact Us						</h1>
+						<div class="title-des wow fadeInDown  animated" >
+						Get in Touch with ALTRA for unparalleled service and support!						</div>
+
+
+
+					</div>
+					<div class="bq-form-box-main flex flex-wrap">
+						<div class="left wow fadeInLeft  animatedLeft">
+							<div class="left-title gtj-ff-sbold">
+								Contact Us							</div>
+							<ul class="com-ul">
+								<li>
+									<div class="icon iconfont">
+										&#xe674;
+									</div>
+									<div class="con">
+
+										<p class="con-des">
+											<a href="mailto:general@altramarine.cn">
+											    general@altramarine.cn											</a>
+										</p>
+									</div>
+
+								</li>
+								<li>
+									<div class="icon iconfont">
+											&#xe6d0;
+
+									</div>
+									<div class="con">
+									
+										<p class="con-des num">
+										    <a href="tel:02258983118">
+										        02258983118										    </a>
+											
+										</p>
+									</div>
+								</li>
+	<li>
+									<div class="icon iconfont">
+										&#xe953;
+
+									</div>
+									<div class="con">
+									
+										<p class="con-des num">
+										    <a href="tel:02258983118">
+										        02258983118										    </a>
+											
+										</p>
+									</div>
+
+								</li>
+								
+
+							</ul>
+						</div>
+						<div class="right wow fadeInRight  animated">
+
+							<div class="tc-pro-forms-boxs">
+								<div class="right-title gtj-ff-sbold">
+									Request a Free Quote
+								</div>
+								<div class="sep-general-form fix">
+										<form class="sep-form sep-form-inquire1" enctype="multipart/form-data"
+										data-plugin="validator" method="post" action="/submission-successful.html">
+										<input type="hidden" name="csrf_token" value="f14c32c15f49ced928f52e86dcb4aee5">
+										<input class="form-control hide" id="in" autocomplete="off" name="email2" />
+										<div class="form-group ons lf">
+										
+											<input class="form-control" placeholder='*Full Name' id="sc-name"
+												name="name" type="text" value="" required />
+										</div>
+
+										<div class="form-group ons rt">
+										
+											<input class="form-control" placeholder='Phone' id="sc-phone" name="phone"
+												type="text" value="" />
+										</div>
+										<div class="form-group ons rt">
+										
+											<input class="form-control" name="email" placeholder='*Email' id="sc-email"
+												type="email" value="" required />
+
+										</div>
+										<div class="form-group ons rt">
+									
+										
+											<input class="form-control" placeholder='Country' id="sc-country"
+												name="country" type="text" value="" />
+
+										</div>
+										<div class="form-group ons rt text-box">
+										
+											<textarea name="content"  cols="20" rows="3"
+												placeholder='*Send Message' id="sc-content" class="form-control"
+												required minlength=16></textarea>
+										</div>
+
+										<div class="form-group ons rt btn-box">
+											<button class="btn btn-primary read-mores trans gtj-ff-sbold" type="submit">
+												<i class="iconfont">
+													&#xe7a1;
+												</i>
+												Submit</button>
+
+										</div>
+									</form>
+ 
+<script>
+$('.sep-form button[type="submit"]').click(function(e){
+	if($('input[name="content"]').val()=='Hello. And Bye.'||$('input[name="content"]').val()=='Test. Please ignore.'){
+		e.preventDefault();
+	}
+	$('input[valid="required"]').each(function(){
+	    if(!$(this).val()){
+	        e.preventDefault();
+	    }
+	}) 
+})
+seajs.use(['/assets/js/kaka/libs/kaka.validator.js'], function(){
+    var form = $('.sep-form-inquire1');
+	var vd = new kakaValidator(form, {
+	     rules: {
+	        '[name=name]': { valid: 'required', errorText: 'Please write your name'},
+	        '[name=email]': { valid: 'required|email', errorText: 'Please write your e-mail'},
+	        '[name=content]': { valid: 'required', errorText: 'Please tell us your detailed request'},
+
+	   
+	    }
+	});
+});
+ 
+</script>								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+			                    		
+
+
+
+
+        <!--test-->
+        <!--
         <div class="gw-browse-module-content clearfix" style="background-repeat:repeat;background-size:auto;width:1440px;max-width:1440px;">
             <div class="gw-grid-col grid-col-pc-12">
                 <div class=" gw-browse-grid" style="height:706px;">
@@ -957,8 +1121,9 @@
                                         </div>
                                     </div>
                                 </div>
-
+-->
                                 <!--四个图标-->
+                                <!--
                                 <style data-link="html{smallToBig: '#' + 'gw-component-' + ~module_id + '-' + ~grid_id + '-' + ~container_id + '-' + id + '
                                 .gw-browse-component-content:hover svg<' + 'color:'+ hover_icon_color +' !important;' + 'background-color:'+ hover_background_color +' !important;'+'>;'}">
                                     #module-23583415-component-icon-1696663557155-8145 .gw-browse-component-content:hover svg{color: !important;background-color:rgba(0, 0, 0, 0) !important;}
@@ -1007,7 +1172,9 @@
                                         </div>
                                     </div>
                                 </div>
+                                -->
                                 <!--虚线-->
+                                <!--
                                 <div class="divide-component">
                                     <div class="gw-browse-component" id="module-23583415-component-divide-1696663668067-1175" style="top:295px;left:35px;width:478px;height:26px;" data-gw-component-custom-type="" data-gw-component-custom-name="">
                                         <div class="gw-browse-component-content" style="border-color:rgb(255, 255, 255);border-bottom-style:dashed;border-width:1px;height:13.5px;"></div>
@@ -1024,6 +1191,7 @@
     <script>
         module_onload('gw-module-23583415');
     </script>
+    -->
 
     <!--底部导航栏代码-->
     <div class="gw-browse-module  " data-full=""

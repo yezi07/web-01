@@ -78,6 +78,7 @@
         }
     </script>
     <style>
+
         .layer-content-center .layui-layer-content {
             text-align: center;
         }
@@ -442,6 +443,155 @@
         --gw-support-color: #fff;
     }
     </style>
+    <!--new-->>
+    <style>
+    /* 基础响应式重置 */
+    * {
+        box-sizing: border-box;
+    }
+    
+    /* 移除固定宽度 */
+    .gw-browse-module-content {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+    
+    /* 导航栏响应式 */
+    @media (max-width: 768px) {
+        /* 顶部导航栏适配 */
+        .gw-browse-module[name='导航'] .gw-browse-container-content {
+            padding: 0 15px;
+        }
+        
+        /* 导航菜单调整为垂直 */
+        #module-23583413-component-nav-1619163695267-2541 .gw-nav-cont {
+            display: block;
+            margin: 5px 0;
+        }
+        
+        #module-23583413-component-nav-1619163695267-2541 .gw-nav {
+            width: 100%;
+            text-align: left;
+            padding: 10px;
+            font-size: 16px;
+        }
+        
+        /* 调整Logo大小 */
+        #module-23583413-component-images-1695725730228-2345 {
+            width: 150px !important;
+            height: auto !important;
+        }
+        
+        /* 底部导航适配 */
+        .gw-browse-module[name='底部导航'] .gw-browse-container-content {
+            padding: 20px 15px;
+        }
+        
+        /* 底部导航内容调整为垂直排列 */
+        #module-23583419-component-nav-1696660750301-2252 .gw-nav-cont {
+            display: block;
+            margin: 10px 0;
+        }
+        
+        #module-23583419-component-nav-1696660750301-2252 .gw-nav {
+            width: 100%;
+            text-align: left;
+            padding: 8px;
+        }
+        
+        /* 隐藏或调整分隔线 */
+        #module-23583419-component-bglayer-1696663057108-1304,
+        #module-23583419-component-bglayer-1696663068797-2434 {
+            display: none;
+        }
+        
+        /* 调整底部文本布局 */
+        #module-23583419-component-text-1696662965053-9376,
+        #module-23583419-component-text-1696662991196-5883 {
+            position: static !important;
+            width: 100% !important;
+            margin: 15px 0;
+        }
+        
+        /* 表单响应式调整 */
+        .bq-index-contact .bq-form-box-main {
+            flex-direction: column;
+        }
+        
+        .bq-index-contact .left,
+        .bq-index-contact .right {
+            width: 100% !important;
+            margin-bottom: 20px;
+        }
+        
+        .form-group.ons.lf,
+        .form-group.ons.rt {
+            width: 100% !important;
+            margin-bottom: 15px;
+        }
+        
+        /* 调整字体大小 */
+        body {
+            font-size: 14px;
+        }
+        
+        h1.title {
+            font-size: 24px !important;
+        }
+        
+        .bq-index-contact .left-title,
+        .bq-index-contact .right-title {
+            font-size: 18px !important;
+        }
+    }
+    
+    /* 平板设备适配 */
+    @media (min-width: 769px) and (max-width: 1024px) {
+        .gw-browse-module-content {
+            padding: 0 20px;
+        }
+        
+        #module-23583413-component-nav-1619163695267-2541 .gw-nav {
+            font-size: 14px;
+            padding: 0 8px;
+        }
+    }
+    
+    /* 通用响应式调整 */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    .gw-browse-component {
+        max-width: 100%;
+    }
+    
+    /* 面包屑导航响应式 */
+    .bread ul.breadcrumb {
+        flex-wrap: wrap;
+    }
+    
+    /* 联系信息响应式 */
+    .bq-contact-main ul.com-ul li {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+    
+    /* 表单响应式 */
+    .sep-general-form .form-group {
+        margin-bottom: 15px;
+    }
+    
+    /* 地图容器响应式 */
+    #module-23583415-component-map-1696663423630-8769 {
+        width: 100% !important;
+        height: 300px !important;
+    }
+</style>
+
+
 </head><!--head部分完全相同-->
 <body class="pc">
     <div id="esitrevda_dom"></div>
@@ -713,7 +863,7 @@
 
         </style>
 
-        <div class="gw-browse-module-content clearfix" style="background-repeat:repeat;background-size:auto;width:1440px;max-width:1440px;">
+        <div class="gw-browse-module-content clearfix" style="background-repeat:repeat;background-size:auto;width:100%;max-width:100%;">
             <div class="gw-grid-col grid-col-pc-12">
                 <div class=" gw-browse-grid" style="height:100px;">
                     <div class="gw-browse-grid-content">
@@ -1211,7 +1361,7 @@ seajs.use(['/assets/js/kaka/libs/kaka.validator.js'], function(){
             }
         </style>
 
-        <div class="gw-browse-module-content clearfix" style="background-repeat:repeat;background-size:auto;width:1440px;max-width:1440px;">
+        <div class="gw-browse-module-content clearfix" style="background-repeat:repeat;background-size:auto;width:100%;max-width:100%;">
             <div class="gw-grid-col grid-col-pc-12">
                 <div class="gw-browse-grid" style="height:336px;">
                     <div class="gw-browse-grid-content">
@@ -2306,7 +2456,39 @@ seajs.use(['/assets/js/kaka/libs/kaka.validator.js'], function(){
                 });
             });
         });
-    </script>        
+    </script>    
+    
+    <script>
+    $(document).ready(function() {
+        // 检测设备类型并添加相应类名
+        function detectDevice() {
+            if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+                $('body').removeClass('pc').addClass('mobile');
+            }
+        }
+        
+        detectDevice();
+        
+        // 窗口大小改变时重新检测
+        $(window).resize(function() {
+            detectDevice();
+        });
+        
+        // 移动端导航菜单处理
+        $('.mobile-nav-toggle').click(function() {
+            $('.gw-nav-cont').toggleClass('mobile-open');
+        });
+        
+        // 移动端导航菜单优化
+        if ($('body').hasClass('mobile')) {
+            // 为导航菜单添加移动端样式
+            $('.gw-nav-cont').css({
+                'display': 'block',
+                'width': '100%'
+            });
+        }
+    });
+</script>
 </body>
 </html>
 

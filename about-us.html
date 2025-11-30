@@ -2,12 +2,12 @@
 <html lang="en" data-lang="en">
 <head>
     <meta charset="utf-8">
-    <title>King Hitech | Professional Maritime Services</title>
-    <meta name="description" content="King Hitech Limited - Professional ship supply, spares supply, repair and dry docking services. 24/7 available for your marine needs.">
-    <meta name="keywords" content="ship supply, marine spares, ship repair, dry docking services">
+    <title>About Us - King Hitech | Professional Maritime Services</title>
+    <meta name="description" content="Learn about King Hitech Limited - A leading provider of professional ship supply, spares supply, repair and dry docking services.">
+    <meta name="keywords" content="about ship supply, marine company, maritime services, ship repair company">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    
+
     <!-- 网站图标 - 根据您的实际文件结构修正 -->
     <!-- 主图标 -->
     <link rel="shortcut icon" href="/my-favicon/favicon.ico" type="image/x-icon">
@@ -31,13 +31,12 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <meta name="apple-mobile-web-app-title" content="King Hitech">
     <meta name="format-detection" content="telephone=no">
-    
     <!-- 字体和图标 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     
     <style>
-        /* 基础样式和变量 - 与联系页面保持一致 */
+        /* 基础样式和变量 - 与首页保持一致 */
         :root {
             --primary-color: #2050a4;
             --secondary-color: #2b80ff;
@@ -97,7 +96,7 @@
             padding: 0 20px;
         }
         
-        /* 顶部导航栏 - 与联系页面保持一致 */
+        /* 顶部导航栏 - 与首页保持一致 */
         .header {
             background: var(--bg-light);
             box-shadow: var(--shadow-light);
@@ -246,132 +245,83 @@
             min-height: calc(100vh - 200px);
         }
         
-        /* 英雄区域 - 全屏大图 */
-        .hero-section {
-            position: relative;
-            height: 90vh;
-            min-height: 600px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-        }
-        
-        .hero-background {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(rgba(32, 80, 164, 0.7), rgba(43, 128, 255, 0.7)), 
-                        url('https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') no-repeat center center;
-            background-size: cover;
-            z-index: -1;
-        }
-        
-        .hero-content {
+        /* 简洁标语 */
+        .slogan-section {
+            padding: 60px 0 40px;
             text-align: center;
-            color: var(--text-light);
-            max-width: 800px;
-            padding: 0 20px;
-            z-index: 1;
         }
         
-        .hero-content h1 {
-            font-size: 3.5rem;
-            margin-bottom: 20px;
+        .slogan-section h1 {
+            font-size: 3rem;
+            color: var(--primary-color);
             font-weight: 700;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-        }
-        
-        .hero-content p {
-            font-size: 1.3rem;
-            margin-bottom: 30px;
-            opacity: 0.95;
-            line-height: 1.8;
-        }
-        
-        .btn {
-            display: inline-block;
-            padding: 15px 35px;
-            background: var(--accent-color);
-            color: var(--text-light);
-            border-radius: var(--border-radius);
-            font-weight: 600;
-            font-size: 1.1rem;
-            transition: var(--transition);
-        }
-        
-        .btn:hover {
-            background: #e55a2b;
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-medium);
+            margin-bottom: 20px;
         }
         
         /* 介绍区域 */
-        .intro-section {
-            padding: 100px 0;
+        .about-intro {
+            padding: 40px 0 80px;
             background: var(--bg-light);
         }
         
-        .intro-container {
+        .about-container {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 60px;
             align-items: center;
         }
         
-        .intro-content h2 {
-            font-size: 2.8rem;
+        .about-content h2 {
+            font-size: 2.5rem;
             color: var(--primary-color);
             margin-bottom: 25px;
             font-weight: 700;
         }
         
-        .intro-content p {
+        .about-content p {
             font-size: 1.1rem;
             line-height: 1.8;
             margin-bottom: 20px;
             color: #666;
         }
         
-        .intro-image {
+        .about-image {
             border-radius: var(--border-radius);
             overflow: hidden;
             box-shadow: var(--shadow-medium);
-            height: 400px;
+            height: 450px;
         }
         
-        .intro-image img {
+        .about-image img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             transition: var(--transition);
         }
         
-        .intro-image:hover img {
+        .about-image:hover img {
             transform: scale(1.05);
         }
         
-        /* 服务模块区域 - 竖排布局 */
-        .services-section {
-            padding: 100px 0;
+        /* 自动滚动图片区域 */
+        .image-gallery-section {
+            padding: 80px 0;
             background: var(--bg-gray);
         }
         
-        .section-title {
+        .gallery-title {
             text-align: center;
-            margin-bottom: 70px;
+            margin-bottom: 50px;
         }
         
-        .section-title h2 {
-            font-size: 2.8rem;
+        .gallery-title h2 {
+            font-size: 2.5rem;
             color: var(--primary-color);
             margin-bottom: 15px;
             font-weight: 700;
         }
         
-        .section-title p {
+        .gallery-title p {
             font-size: 1.2rem;
             color: #666;
             max-width: 700px;
@@ -379,92 +329,62 @@
             line-height: 1.8;
         }
         
-        .services-container {
-            display: flex;
-            flex-direction: column;
-            gap: 60px;
-        }
-        
-        .service-module {
-            background: var(--bg-light);
-            border-radius: var(--border-radius);
+        .image-gallery {
+            position: relative;
             overflow: hidden;
-            box-shadow: var(--shadow-light);
-            transition: var(--transition);
-        }
-        
-        .service-module:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-medium);
-        }
-        
-        .service-content {
-            padding: 40px;
-        }
-        
-        .service-content h3 {
-            font-size: 2rem;
-            color: var(--primary-color);
-            margin-bottom: 20px;
-            font-weight: 600;
-        }
-        
-        .service-content p {
-            line-height: 1.8;
-            color: #666;
-            margin-bottom: 25px;
-            font-size: 1.1rem;
-        }
-        
-        /* 横向滚动图片区域 */
-        .service-images {
-            display: flex;
-            overflow-x: auto;
-            scroll-snap-type: x mandatory;
-            scrollbar-width: thin;
-            scrollbar-color: var(--primary-color) var(--bg-gray);
-            padding: 15px;
-            gap: 20px;
             height: 300px;
-            background: var(--bg-light);
+            border-radius: var(--border-radius);
         }
         
-        .service-images::-webkit-scrollbar {
-            height: 8px;
+        .gallery-track {
+            display: flex;
+            width: max-content;
+            animation: scrollGallery 40s linear infinite;
+            height: 100%;
         }
         
-        .service-images::-webkit-scrollbar-track {
-            background: var(--bg-gray);
-            border-radius: 10px;
+        .gallery-track:hover {
+            animation-play-state: paused;
         }
         
-        .service-images::-webkit-scrollbar-thumb {
-            background: var(--primary-color);
-            border-radius: 10px;
-        }
-        
-        .service-image {
+        .gallery-item {
             flex: 0 0 auto;
             width: 400px;
             height: 100%;
+            margin-right: 20px;
             border-radius: var(--border-radius);
             overflow: hidden;
-            scroll-snap-align: start;
-            box-shadow: var(--shadow-light);
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: white;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
         }
         
-        .service-image img {
+        .gallery-item img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             transition: var(--transition);
         }
         
-        .service-image:hover img {
-            transform: scale(1.05);
+        .gallery-item:hover img {
+            transform: scale(1.1);
         }
         
-        /* 底部导航栏 - 与联系页面保持一致 */
+        @keyframes scrollGallery {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(calc(-400px * 10 - 20px * 9));
+            }
+        }
+        
+        /* 底部导航栏 - 与首页保持一致 */
         .footer {
             background: var(--bg-dark);
             color: var(--text-light);
@@ -580,19 +500,15 @@
                 font-size: 17px;
             }
             
-            .hero-content h1 {
-                font-size: 3rem;
+            .slogan-section h1 {
+                font-size: 2.5rem;
             }
             
-            .intro-container {
+            .about-container {
                 gap: 40px;
             }
             
-            .service-images {
-                height: 250px;
-            }
-            
-            .service-image {
+            .gallery-item {
                 width: 350px;
             }
         }
@@ -635,39 +551,36 @@
                 margin-top: 105px;
             }
             
-            .hero-section {
-                height: 70vh;
-                min-height: 500px;
+            .slogan-section {
+                padding: 40px 0 30px;
             }
             
-            .hero-content h1 {
-                font-size: 2.5rem;
+            .slogan-section h1 {
+                font-size: 2.2rem;
             }
             
-            .hero-content p {
-                font-size: 1.1rem;
+            .about-intro {
+                padding: 30px 0 60px;
             }
             
-            .intro-section, .services-section {
-                padding: 60px 0;
-            }
-            
-            .intro-container {
+            .about-container {
                 grid-template-columns: 1fr;
                 gap: 40px;
             }
             
-            .section-title h2 {
-                font-size: 2.2rem;
+            .about-content h2 {
+                font-size: 2rem;
             }
             
-            .service-images {
-                padding: 10px;
-                height: 220px;
-                gap: 15px;
+            .gallery-title h2 {
+                font-size: 2rem;
             }
             
-            .service-image {
+            .image-gallery {
+                height: 250px;
+            }
+            
+            .gallery-item {
                 width: 300px;
             }
             
@@ -696,33 +609,24 @@
                 margin-top: 100px;
             }
             
-            .hero-section {
-                height: 60vh;
-                min-height: 400px;
+            .slogan-section h1 {
+                font-size: 1.8rem;
             }
             
-            .hero-content h1 {
-                font-size: 2.2rem;
+            .about-intro {
+                padding: 20px 0 40px;
             }
             
-            .hero-content p {
-                font-size: 1rem;
+            .about-image {
+                height: 350px;
             }
             
-            .intro-section, .services-section {
-                padding: 40px 0;
-            }
-            
-            .service-content {
-                padding: 30px 20px;
-            }
-            
-            .service-images {
+            .image-gallery {
                 height: 200px;
             }
             
-            .service-image {
-                width: 280px;
+            .gallery-item {
+                width: 250px;
             }
             
             .footer-container {
@@ -773,17 +677,17 @@
             <div class="header-container">
                 <div class="logo">
                     <a href="/">
-                        <img src="/image/logo.jpg" alt="King Hitech">
+                         <img src="/image/logo.jpg" alt="King Hitech">
                     </a>
                 </div>
                 
                 <!-- 桌面端导航 -->
                 <nav class="nav-desktop">
-                    <a href="/" class="active">Home</a>
-                    <a href="/about-us.html">About Us</a>
-                        <a href="/services.html">Our Services</a>
-                        <a href="/products.html">Products</a>
-                        <a href="/contact-us.html">Contact Us</a>
+                    <a href="/">Home</a>
+                    <a href="/about-us.html" class="active">About Us</a>
+                    <a href="/services.html">Services</a>
+                    <a href="/products.html">Products</a>
+                    <a href="/contact-us.html">Contact Us</a>
                 </nav>
                 
                 <!-- 移动端菜单切换 -->
@@ -796,8 +700,8 @@
             
             <!-- 移动端导航菜单 -->
             <nav class="nav-mobile" id="navMobile">
-                <a href="/" class="active">Home</a>
-                <a href="/about-us.html">About Us</a>
+                <a href="/">Home</a>
+                <a href="/about-us.html" class="active">About Us</a>
                 <a href="/services.html">Services</a>
                 <a href="/products.html">Products</a>
                 <a href="/contact-us.html">Contact Us</a>
@@ -807,118 +711,70 @@
 
     <!-- 主要内容区域 -->
     <main class="main-content">
-        <!-- 英雄区域 - 全屏大图 -->
-        <section class="hero-section">
-            <div class="hero-background"></div>
-            <div class="hero-content animate-fade-in">
-                <h1>Professional Maritime Services Worldwide</h1>
-                <p>Your trusted partner in ship spares supply and repair services. With over 20 years of experience, we provide comprehensive solutions for the maritime industry.</p>
-                <!-- 移除了按钮 -->
+        <!-- 简洁标语 -->
+        <section class="slogan-section animate-fade-in">
+            <div class="container">
+                <h1>Leading the Way in Maritime Excellence</h1>
             </div>
         </section>
         
         <!-- 介绍区域 -->
-        <section class="intro-section">
+        <section class="about-intro">
             <div class="container">
-                <div class="intro-container animate-slide-up">
-                    <div class="intro-content">
+                <div class="about-container animate-slide-up">
+                    <div class="about-content">
                         <h2>About King Hitech</h2>
-                        <p>King Hitech Limited is a leading provider of maritime services with headquarters in Hong Kong and strategic locations worldwide. We specialize in ship supply, ship spares supply, ship repair, and dry docking services.</p>
-                        <p>Our team of experienced professionals is available 24/7 to ensure your vessels operate at peak efficiency. We understand the critical nature of maritime operations and are committed to delivering timely, reliable solutions.</p>
-                        <p>With a global network of suppliers and partners, we can source and deliver high-quality marine equipment and spare parts to any port worldwide, ensuring minimal downtime for your operations.</p>
-                        <a href="/about" class="btn">Learn More</a>
+                        <p>Founded in 2003, King Hitech Limited has established itself as a premier provider of comprehensive maritime services. Our journey began with a simple mission: to deliver reliable, high-quality solutions to the global shipping industry.</p>
+                        <p>Over the years, we've grown from a small ship supply company to a full-service maritime solutions provider with a global footprint. Our commitment to excellence has earned us the trust of ship owners and operators worldwide.</p>
+                        <p>Today, we operate from strategic locations across Asia, Europe, and the Americas, ensuring that our clients receive timely support wherever their vessels may be. Our team of over 200 dedicated professionals brings deep industry expertise to every project.</p>
+                        <p>At King Hitech, we believe that success is built on strong relationships, technical expertise, and an unwavering commitment to quality. These principles guide everything we do, from sourcing the right spare parts to executing complex repair projects.</p>
                     </div>
-                    <div class="intro-image">
-                        
+                    <div class="about-image">
+                        <!-- 右侧图片占位 -->
                     </div>
                 </div>
             </div>
         </section>
         
-        <!-- 服务模块区域 - 竖排布局 -->
-        <section id="services" class="services-section">
+        <!-- 自动滚动图片区域 -->
+        <section class="image-gallery-section">
             <div class="container">
-                <div class="section-title">
-                    <h2>Our Services</h2>
-                    <p>We offer comprehensive maritime solutions tailored to meet the specific needs of ship owners and operators worldwide.</p>
+                <div class="gallery-title">
+                    <h2>Our Global Operations</h2>
+                    <p>Explore our facilities and operations around the world</p>
                 </div>
-                
-                <div class="services-container">
-                    <!-- 服务模块 1 -->
-                    <div class="service-module animate-slide-up">
-                        <div class="service-content">
-                            <h3>Ship Supply & Spares</h3>
-                            <p>We provide a complete range of ship supplies and spare parts, ensuring your vessels have everything they need for smooth operations. Our global network allows us to source and deliver quality products efficiently.</p>
-                            <p>From engine parts to deck equipment, we offer reliable solutions with competitive pricing and fast delivery times. Our inventory includes genuine OEM parts and high-quality alternatives to meet various budgets and requirements.</p>
+                <div class="image-gallery">
+                    <div class="gallery-track">
+                        <!-- 10张图片/色块 -->
+                        <div class="gallery-item" style="background: linear-gradient(45deg, #2050a4, #2b80ff);">
+                            <span>Ship Supply</span>
                         </div>
-                        <div class="service-images">
-                            <div class="service-image">
-                                
-                            </div>
-                            <div class="service-image">
-                                
-                            </div>
-                            <div class="service-image">
-                                
-                            </div>
-                            <div class="service-image">
-                                
-                            </div>
-                            <div class="service-image">
-                                
-                            </div>
+                        <div class="gallery-item" style="background: linear-gradient(45deg, #ff6b35, #ff8c5a);">
+                            <span>Repair Services</span>
                         </div>
-                    </div>
-                    
-                    <!-- 服务模块 2 -->
-                    <div class="service-module animate-slide-up">
-                        <div class="service-content">
-                            <h3>Repair & Dry Docking</h3>
-                            <p>Our ship repair and dry docking services ensure your vessels remain in optimal condition. We work with certified technicians and use state-of-the-art equipment to deliver high-quality repairs.</p>
-                            <p>Whether it's routine maintenance or emergency repairs, our team is equipped to handle projects of any scale with precision and efficiency. Our facilities are equipped to accommodate vessels of various sizes and types.</p>
+                        <div class="gallery-item" style="background: linear-gradient(45deg, #34c759, #5cdb85);">
+                            <span>Technical Support</span>
                         </div>
-                        <div class="service-images">
-                            <div class="service-image">
-                                
-                            </div>
-                            <div class="service-image">
-                                
-                            </div>
-                            <div class="service-image">
-                                
-                            </div>
-                            <div class="service-image">
-                                
-                            </div>
-                            <div class="service-image">
-                                
-                            </div>
+                        <div class="gallery-item" style="background: linear-gradient(45deg, #5856d6, #7d7aff);">
+                            <span>Global Network</span>
                         </div>
-                    </div>
-                    
-                    <!-- 服务模块 3 -->
-                    <div class="service-module animate-slide-up">
-                        <div class="service-content">
-                            <h3>Technical Support</h3>
-                            <p>Our technical support team provides expert assistance for all your maritime needs. From troubleshooting to technical consultations, we're here to help you overcome any operational challenges.</p>
-                            <p>With 24/7 availability and deep industry expertise, we ensure your vessels operate safely and efficiently at all times. Our engineers are available for on-site support when needed.</p>
+                        <div class="gallery-item" style="background: linear-gradient(45deg, #ff2d55, #ff6384);">
+                            <span>Quality Assurance</span>
                         </div>
-                        <div class="service-images">
-                            <div class="service-image">
-                                
-                            </div>
-                            <div class="service-image">
-                                
-                            </div>
-                            <div class="service-image">
-                                
-                            </div>
-                            <div class="service-image">
-                                
-                            </div>
-                            <div class="service-image">
-                                
-                            </div>
+                        <div class="gallery-item" style="background: linear-gradient(45deg, #ff9500, #ffb143);">
+                            <span>24/7 Service</span>
+                        </div>
+                        <div class="gallery-item" style="background: linear-gradient(45deg, #5ac8fa, #87ceeb);">
+                            <span>Expert Team</span>
+                        </div>
+                        <div class="gallery-item" style="background: linear-gradient(45deg, #af52de, #c87ceb);">
+                            <span>Innovation</span>
+                        </div>
+                        <div class="gallery-item" style="background: linear-gradient(45deg, #ff3b30, #ff6961);">
+                            <span>Reliability</span>
+                        </div>
+                        <div class="gallery-item" style="background: linear-gradient(45deg, #32d74b, #5cdb85);">
+                            <span>Partnership</span>
                         </div>
                     </div>
                 </div>
@@ -976,7 +832,7 @@
             
             <!-- 版权信息 -->
             <div class="footer-bottom">
-                <p>&copy; 2024 King Hitech Limited. All rights reserved. | Professional Maritime Solutions</p>
+                <p>&copy; 2024 King Hitech Limited. All rights reserved. | Professional Marine Solutions</p>
             </div>
         </div>
     </footer>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>提交成功</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            text-align: center; 
+            padding: 50px 20px; 
+            background: #f8f9fa; 
+        }
+        .success-container { 
+            background: white; 
+            padding: 40px; 
+            border-radius: 10px; 
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1); 
+            max-width: 500px; 
+            margin: 0 auto; 
+        }
+        .success-icon { 
+            font-size: 60px; 
+            color: #28a745; 
+            margin-bottom: 20px; 
+        }
+        h1 { color: #28a745; margin-bottom: 20px; }
+        .btn { 
+            display: inline-block; 
+            padding: 12px 30px; 
+            background: #007bff; 
+            color: white; 
+            text-decoration: none; 
+            border-radius: 5px; 
+            margin: 20px 10px; 
+            transition: background 0.3s; 
+        }
+        .btn:hover { background: #0056b3; }
+        .auto-redirect { 
+            color: #6c757d; 
+            margin-top: 30px; 
+            font-size: 14px; 
+        }
+    </style>
+</head>
+<body>
+    <div class="success-container">
+        <div class="success-icon">✅</div>
+        <h1>提交成功！</h1>
+        <p>感谢您的咨询，我们已经收到您的信息。</p>
+        <p>我们的团队会在24小时内通过邮箱或电话联系您。</p>
+        
+        <div>
+            <a href="/" class="btn">返回首页</a>
+            <a href="lianxiwomen.html" class="btn" style="background: #6c757d;">继续咨询</a>
+        </div>
+        
+        <div class="auto-redirect" id="countdown">
+            5秒后自动返回首页...
+        </div>
+    </div>
+
+    <script>
+        let countdown = 5;
+        const countdownElement = document.getElementById('countdown');
+        const countdownInterval = setInterval(() => {
+            countdown--;
+            countdownElement.textContent = `${countdown}秒后自动返回首页...`;
+            
+            if (countdown <= 0) {
+                clearInterval(countdownInterval);
+                window.location.href = '/';
+            }
+        }, 1000);
+    </script>
+</body>
+</html>

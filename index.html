@@ -2,11 +2,17 @@
 <html lang="en" data-lang="en">
 <head>
     <meta charset="utf-8">
-    <title>King Hitech - Professional Marine Services</title>
-    <meta name="description" content="King Hitech Limited specialized in Ships supply, Ship spares supply, Ship repair and dry docking service. Professional marine services worldwide.">
-    <meta name="keywords" content="ship supply, marine spares, ship repair, dry docking, marine services">
+    <title>Contact Us - King Hitech | Professional Maritime Services</title>
+    <meta name="description" content="Contact King Hitech Limited for professional ship supply, spares supply, repair and dry docking services. 24/7 available for your marine needs.">
+    <meta name="keywords" content="contact ship supply, marine spares contact, ship repair contact, dry docking services">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <!-- 网站图标 -->
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     
     <!-- 字体和图标 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -88,7 +94,7 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            min-height: 80px;
+            min-height: 100px;
             position: relative;
         }
         
@@ -98,9 +104,9 @@
         }
         
         .logo img {
-            height: 50px;
+            height: 70px;
             width: auto;
-            max-width: 200px;
+            max-width: 280px;
             object-fit: contain;
         }
         
@@ -108,13 +114,13 @@
         .nav-desktop {
             display: flex;
             align-items: center;
-            gap: 30px;
+            gap: 35px;
         }
         
         .nav-desktop a {
             font-weight: 600;
-            font-size: 16px;
-            padding: 10px 0;
+            font-size: 18px;
+            padding: 12px 0;
             position: relative;
             color: var(--primary-color);
         }
@@ -125,7 +131,7 @@
             bottom: 0;
             left: 0;
             width: 0;
-            height: 2px;
+            height: 3px;
             background: var(--secondary-color);
             transition: var(--transition);
         }
@@ -151,15 +157,15 @@
             display: none;
             flex-direction: column;
             cursor: pointer;
-            padding: 10px;
+            padding: 12px;
             z-index: 1001;
         }
         
         .menu-toggle span {
-            width: 25px;
+            width: 30px;
             height: 3px;
             background: var(--primary-color);
-            margin: 3px 0;
+            margin: 4px 0;
             transition: var(--transition);
         }
         
@@ -188,17 +194,19 @@
         
         .nav-mobile a {
             display: block;
-            padding: 15px 20px;
+            padding: 18px 20px;
             font-weight: 600;
+            font-size: 16px;
             color: var(--primary-color);
             border-bottom: 1px solid var(--border-color);
             transition: var(--transition);
+            text-align: center;
         }
         
         .nav-mobile a:hover {
             background: var(--bg-gray);
             color: var(--secondary-color);
-            padding-left: 25px;
+            padding-left: 30px;
         }
         
         .menu-toggle.active span:nth-child(1) {
@@ -215,39 +223,44 @@
         
         /* 主要内容区域 */
         .main-content {
-            margin-top: 100px;
+            margin-top: 120px;
             min-height: calc(100vh - 200px);
-            padding: 40px 0;
+            padding: 50px 0;
         }
         
-        .hero-section {
+        .page-header {
             background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
             color: var(--text-light);
-            padding: 80px 0;
+            padding: 100px 0;
             text-align: center;
             margin-bottom: 60px;
             border-radius: var(--border-radius);
         }
         
-        .hero-content h1 {
-            font-size: 3rem;
+        .page-header h1 {
+            font-size: 3.5rem;
             margin-bottom: 20px;
             font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
         }
         
-        .hero-content p {
-            font-size: 1.2rem;
+        .page-header p {
+            font-size: 1.3rem;
             margin-bottom: 30px;
-            opacity: 0.9;
+            opacity: 0.95;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
         }
         
         .btn {
             display: inline-block;
-            padding: 12px 30px;
+            padding: 15px 35px;
             background: var(--accent-color);
             color: var(--text-light);
             border-radius: var(--border-radius);
             font-weight: 600;
+            font-size: 1.1rem;
             transition: var(--transition);
         }
         
@@ -260,75 +273,91 @@
         /* 联系表单区域 */
         .contact-section {
             background: var(--bg-gray);
-            padding: 60px 0;
+            padding: 80px 0;
             border-radius: var(--border-radius);
         }
         
         .section-title {
             text-align: center;
-            margin-bottom: 40px;
+            margin-bottom: 50px;
         }
         
         .section-title h2 {
-            font-size: 2.5rem;
+            font-size: 2.8rem;
             color: var(--primary-color);
             margin-bottom: 15px;
+            font-weight: 700;
         }
         
         .section-title p {
-            font-size: 1.1rem;
+            font-size: 1.2rem;
             color: #666;
-            max-width: 600px;
+            max-width: 700px;
             margin: 0 auto;
+            line-height: 1.8;
         }
         
         .contact-container {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            align-items: start;
+            gap: 50px;
+            align-items: stretch; /* 确保两栏等高 */
         }
         
         .contact-info {
             background: var(--bg-light);
-            padding: 40px;
+            padding: 50px;
             border-radius: var(--border-radius);
             box-shadow: var(--shadow-light);
+            display: flex;
+            flex-direction: column;
+            height: 100%; /* 确保高度100% */
         }
         
         .contact-info h3 {
             color: var(--primary-color);
-            margin-bottom: 30px;
-            font-size: 1.5rem;
+            margin-bottom: 35px;
+            font-size: 1.8rem;
+            font-weight: 600;
+        }
+        
+        .contact-items {
+            flex: 1; /* 让内容区域填充剩余空间 */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; /* 均匀分布内容 */
         }
         
         .contact-item {
             display: flex;
             align-items: flex-start;
-            margin-bottom: 25px;
-            gap: 15px;
+            margin-bottom: 30px;
+            gap: 20px;
         }
         
         .contact-icon {
-            width: 50px;
-            height: 50px;
+            width: 60px;
+            height: 60px;
             background: var(--primary-color);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             color: var(--text-light);
-            font-size: 1.2rem;
+            font-size: 1.4rem;
             flex-shrink: 0;
         }
         
         .contact-details h4 {
-            margin-bottom: 5px;
+            margin-bottom: 8px;
             color: var(--text-dark);
+            font-size: 1.1rem;
+            font-weight: 600;
         }
         
-        .contact-details a {
+        .contact-details a, .contact-details p {
             color: var(--secondary-color);
+            font-size: 1rem;
         }
         
         .contact-details a:hover {
@@ -338,72 +367,90 @@
         /* 表单样式 */
         .contact-form {
             background: var(--bg-light);
-            padding: 40px;
+            padding: 50px;
             border-radius: var(--border-radius);
             box-shadow: var(--shadow-light);
+            display: flex;
+            flex-direction: column;
+            height: 100%; /* 确保高度100% */
         }
         
         .contact-form h3 {
             color: var(--primary-color);
-            margin-bottom: 30px;
-            font-size: 1.5rem;
+            margin-bottom: 35px;
+            font-size: 1.8rem;
+            font-weight: 600;
+        }
+        
+        .form-content {
+            flex: 1; /* 让表单内容填充剩余空间 */
+            display: flex;
+            flex-direction: column;
         }
         
         .form-group {
-            margin-bottom: 20px;
+            margin-bottom: 25px;
         }
         
         .form-row {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 15px;
+            gap: 20px;
         }
         
         .form-control {
             width: 100%;
-            padding: 12px 15px;
+            padding: 15px;
             border: 2px solid var(--border-color);
             border-radius: var(--border-radius);
             font-size: 16px;
             transition: var(--transition);
+            font-family: inherit;
         }
         
         .form-control:focus {
             border-color: var(--secondary-color);
             box-shadow: 0 0 0 3px rgba(43, 128, 255, 0.1);
+            outline: none;
         }
         
         textarea.form-control {
             resize: vertical;
-            min-height: 120px;
+            min-height: 140px;
+            font-family: inherit;
         }
         
         .btn-submit {
             width: 100%;
-            padding: 15px;
+            padding: 18px;
             background: var(--primary-color);
             color: var(--text-light);
             border-radius: var(--border-radius);
-            font-size: 16px;
+            font-size: 1.1rem;
             font-weight: 600;
+            transition: var(--transition);
+            margin-top: auto; /* 将按钮推到底部 */
         }
         
         .btn-submit:hover {
             background: var(--secondary-color);
             transform: translateY(-2px);
+            box-shadow: var(--shadow-medium);
         }
         
         .btn-submit:disabled {
             background: #ccc;
             cursor: not-allowed;
             transform: none;
+            box-shadow: none;
         }
         
         .form-message {
-            margin-top: 15px;
-            padding: 10px;
+            margin-top: 20px;
+            padding: 15px;
             border-radius: var(--border-radius);
             display: none;
+            font-size: 1rem;
         }
         
         .form-message.success {
@@ -424,22 +471,23 @@
         .footer {
             background: var(--bg-dark);
             color: var(--text-light);
-            padding: 60px 0 20px;
+            padding: 80px 0 30px;
         }
         
         .footer-content {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
+            gap: 50px;
             margin-bottom: 40px;
         }
         
         .footer-section h3 {
             color: var(--text-light);
-            margin-bottom: 20px;
-            font-size: 1.3rem;
+            margin-bottom: 25px;
+            font-size: 1.4rem;
             position: relative;
-            padding-bottom: 10px;
+            padding-bottom: 12px;
+            font-weight: 600;
         }
         
         .footer-section h3::after {
@@ -447,16 +495,24 @@
             position: absolute;
             bottom: 0;
             left: 0;
-            width: 50px;
-            height: 2px;
+            width: 60px;
+            height: 3px;
             background: var(--secondary-color);
         }
         
         .footer-contact p {
-            margin-bottom: 15px;
+            margin-bottom: 18px;
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 12px;
+            font-size: 1rem;
+        }
+        
+        .footer-contact i {
+            width: 20px;
+            text-align: center;
+            font-size: 1.1rem;
+            color: var(--secondary-color);
         }
         
         .footer-contact a {
@@ -480,25 +536,27 @@
             color: var(--text-light);
             opacity: 0.9;
             transition: var(--transition);
-            padding: 5px 0;
+            padding: 8px 0;
+            font-size: 1rem;
         }
         
         .footer-links a:hover {
             color: var(--secondary-color);
             opacity: 1;
-            padding-left: 10px;
+            padding-left: 12px;
         }
         
         .footer-about p {
             line-height: 1.8;
             opacity: 0.9;
+            font-size: 1rem;
         }
         
         .footer-bottom {
             text-align: center;
-            padding-top: 20px;
+            padding-top: 30px;
             border-top: 1px solid rgba(255,255,255,0.1);
-            font-size: 14px;
+            font-size: 1rem;
             opacity: 0.8;
         }
         
@@ -508,26 +566,41 @@
                 padding: 0 15px;
             }
             
-            .nav-desktop {
-                gap: 20px;
+            .header-container {
+                min-height: 90px;
             }
             
-            .hero-content h1 {
-                font-size: 2.5rem;
+            .logo img {
+                height: 60px;
+                max-width: 240px;
+            }
+            
+            .nav-desktop {
+                gap: 25px;
+            }
+            
+            .nav-desktop a {
+                font-size: 17px;
+            }
+            
+            .page-header h1 {
+                font-size: 3rem;
             }
             
             .contact-container {
-                gap: 30px;
+                gap: 40px;
             }
         }
         
         @media (max-width: 768px) {
             .header-container {
-                min-height: 70px;
+                min-height: 85px;
+                padding: 0 15px;
             }
             
             .logo img {
-                height: 40px;
+                height: 55px;
+                max-width: 220px;
             }
             
             .nav-desktop {
@@ -538,36 +611,51 @@
                 display: flex;
             }
             
-            .main-content {
-                margin-top: 80px;
-                padding: 20px 0;
+            .nav-mobile {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--bg-light);
+                box-shadow: var(--shadow-medium);
+                flex-direction: column;
             }
             
-            .hero-section {
-                padding: 60px 0;
+            .nav-mobile.active {
+                display: flex;
+            }
+            
+            .main-content {
+                margin-top: 105px;
+                padding: 30px 0;
+            }
+            
+            .page-header {
+                padding: 80px 0;
                 margin-bottom: 40px;
             }
             
-            .hero-content h1 {
-                font-size: 2rem;
+            .page-header h1 {
+                font-size: 2.5rem;
             }
             
-            .hero-content p {
+            .page-header p {
                 font-size: 1.1rem;
             }
             
             .section-title h2 {
-                font-size: 2rem;
+                font-size: 2.2rem;
             }
             
             .contact-container {
                 grid-template-columns: 1fr;
-                gap: 30px;
+                gap: 40px;
             }
             
             .contact-info,
             .contact-form {
-                padding: 30px;
+                padding: 40px;
             }
             
             .form-row {
@@ -575,50 +663,89 @@
             }
             
             .footer {
-                padding: 40px 0 15px;
+                padding: 60px 0 25px;
             }
             
             .footer-content {
                 grid-template-columns: 1fr;
-                gap: 30px;
+                gap: 40px;
+            }
+            
+            /* 移动端电话居中对齐 */
+            .contact-item {
+                flex-direction: column;
+                text-align: center;
+                align-items: center;
+                gap: 15px;
+            }
+            
+            .contact-details {
+                text-align: center;
+                width: 100%;
+            }
+            
+            .contact-details h4,
+            .contact-details a,
+            .contact-details p {
+                text-align: center;
+            }
+            
+            /* 移动端底部图标对齐 */
+            .footer-contact p {
+                justify-content: center;
+                text-align: center;
             }
         }
         
         @media (max-width: 480px) {
             .header-container {
-                min-height: 60px;
+                min-height: 80px;
+                padding: 0 10px;
             }
             
             .logo img {
-                height: 35px;
+                height: 50px;
+                max-width: 200px;
             }
             
             .main-content {
-                margin-top: 70px;
-                padding: 15px 0;
+                margin-top: 100px;
+                padding: 20px 0;
             }
             
-            .hero-section {
-                padding: 40px 0;
+            .page-header {
+                padding: 60px 0;
             }
             
-            .hero-content h1 {
-                font-size: 1.8rem;
+            .page-header h1 {
+                font-size: 2.2rem;
+            }
+            
+            .page-header p {
+                font-size: 1rem;
             }
             
             .contact-info,
             .contact-form {
-                padding: 20px;
+                padding: 30px 20px;
             }
             
             .contact-item {
-                flex-direction: column;
-                text-align: center;
-                gap: 10px;
+                margin-bottom: 25px;
             }
             
             .contact-icon {
-                align-self: center;
+                width: 50px;
+                height: 50px;
+                font-size: 1.2rem;
+            }
+            
+            .footer-container {
+                padding: 0 15px;
+            }
+            
+            .footer-section h3 {
+                font-size: 1.3rem;
             }
         }
         
@@ -677,17 +804,17 @@
                 <div class="logo">
                     <a href="/">
                         <img src="/image/logo.jpg" alt="King Hitech" 
-                             onerror="this.src='https://via.placeholder.com/200x50/2050a4/ffffff?text=King+Hitech'">
+                             onerror="this.src='https://via.placeholder.com/280x70/2050a4/ffffff?text=King+Hitech'">
                     </a>
                 </div>
                 
                 <!-- 桌面端导航 -->
                 <nav class="nav-desktop">
-                    <a href="/" class="active">Home</a>
+                    <a href="/">Home</a>
                     <a href="/about">About Us</a>
                     <a href="/services">Services</a>
                     <a href="/products">Products</a>
-                    <a href="/contact">Contact</a>
+                    <a href="/contact" class="active">Contact Us</a>
                 </nav>
                 
                 <!-- 移动端菜单切换 -->
@@ -704,7 +831,7 @@
                 <a href="/about">About Us</a>
                 <a href="/services">Services</a>
                 <a href="/products">Products</a>
-                <a href="/contact">Contact</a>
+                <a href="/contact" class="active">Contact Us</a>
             </nav>
         </div>
     </header>
@@ -712,67 +839,72 @@
     <!-- 主要内容区域 -->
     <main class="main-content">
         <div class="container">
-            <!-- Hero Section -->
-            <section class="hero-section animate-fade-in">
-                <div class="hero-content">
-                    <h1>Professional Marine Services Worldwide</h1>
-                    <p>Your trusted partner in ship supply, spares supply, repair and dry docking services</p>
-                    <a href="#contact" class="btn">Get In Touch</a>
+            <!-- 页面头部 -->
+            <section class="page-header animate-fade-in">
+                <div class="page-header-content">
+                    <h1>Professional Maritime Services Worldwide</h1>
+                    <p>Your trusted partner in ship spares supply and repair services.
+                        Get in touch with our maritime experts.
+                        We're available 24/7 to provide professional solutions for your needs.</p>
+                    <a href="#contact-form" class="btn">Send Message</a>
                 </div>
             </section>
             
             <!-- 联系表单区域 -->
-            <section id="contact" class="contact-section animate-slide-up">
+            <section id="contact-form" class="contact-section animate-slide-up">
                 <div class="section-title">
-                    <h2>Contact Us</h2>
-                    <p>Get in touch with our experts for professional marine solutions</p>
+                    <h2>Get In Touch</h2>
+                    <p>Our team is available around the clock to assist with your maritime service requirements. Fill out the form below and we'll respond promptly.</p>
                 </div>
                 
                 <div class="contact-container">
                     <!-- 联系信息 -->
                     <div class="contact-info">
                         <h3>Contact Information</h3>
-                        
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-phone"></i>
-                            </div>
-                            <div class="contact-details">
-                                <h4>Phone Numbers</h4>
-                                <p>
-                                    <a href="tel:+8613998457008">+86 139 9845 7008</a><br>
-                                    <a href="tel:+8641186757153">+86 411 86757153</a>
-                                </p>
-                            </div>
-                        </div>
-                        
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-envelope"></i>
-                            </div>
-                            <div class="contact-details">
-                                <h4>Email Address</h4>
-                                <p><a href="mailto:huang.yongqiang@zy-engineering.com">huang.yongqiang@zy-engineering.com</a></p>
-                            </div>
-                        </div>
-                        
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-map-marker-alt"></i>
-                            </div>
-                            <div class="contact-details">
-                                <h4>Headquarters</h4>
-                                <p>6/F Manulife Place, 348 Kwun Tong Road, Kowloon, Hong Kong</p>
-                            </div>
-                        </div>
-                        
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-clock"></i>
-                            </div>
-                            <div class="contact-details">
-                                <h4>Business Hours</h4>
-                                <p>Monday - Friday: 9:00 AM - 6:00 PM<br>Saturday: 9:00 AM - 1:00 PM</p>
+                        <div class="contact-items">
+                            <div>
+                                <div class="contact-item">
+                                    <div class="contact-icon">
+                                        <i class="fas fa-phone"></i>
+                                    </div>
+                                    <div class="contact-details">
+                                        <h4>Phone Numbers</h4>
+                                        <p>
+                                            <a href="tel:+8613998457008">+86 139 9845 7008</a><br>
+                                            <a href="tel:+8641186757153">+86 411 8675 7153</a>
+                                        </p>
+                                    </div>
+                                </div>
+                                
+                                <div class="contact-item">
+                                    <div class="contact-icon">
+                                        <i class="fas fa-envelope"></i>
+                                    </div>
+                                    <div class="contact-details">
+                                        <h4>Email Address</h4>
+                                        <p><a href="mailto:huang.yongqiang@zy-engineering.com">huang.yongqiang@zy-engineering.com</a></p>
+                                    </div>
+                                </div>
+                                
+                                <div class="contact-item">
+                                    <div class="contact-icon">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                    </div>
+                                    <div class="contact-details">
+                                        <h4>Headquarters</h4>
+                                        <p>6/F Manulife Place, 348 Kwun Tong Road, Kowloon, Hong Kong</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="contact-item">
+                                    <div class="contact-icon">
+                                        <i class="fas fa-clock"></i>
+                                    </div>
+                                    <div class="contact-details">
+                                        <h4>Business Hours</h4>
+                                        <p>24/7 Available - We're here for you anytime, day or night</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -780,40 +912,62 @@
                     <!-- 联系表单 -->
                     <div class="contact-form">
                         <h3>Send Us a Message</h3>
-                        <form id="contactForm" action="https://formspree.io/f/xzzlqnpk" method="POST">
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <input type="text" class="form-control" name="name" placeholder="Full Name *" required>
+                        <div class="form-content">
+                            <!-- 修改后的表单 - 使用简化版的邮件配置 -->
+                            <form id="contactForm" action="https://formspree.io/f/xzzlqnpk" method="POST">
+                                <!-- Formspree 配置字段 -->
+                                <input type="hidden" name="_subject" value="King Hitech - New Customer Inquiry">
+                                <input type="hidden" name="_language" value="zh">
+                                <input type="text" name="_gotcha" style="display:none">
+                                
+                                <!-- 完整版原有字段 -->
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label>Full Name *</label>
+                                        <input type="text" class="form-control" name="name" 
+                                               placeholder="Enter your full name" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Phone Number</label>
+                                        <input type="tel" class="form-control" name="phone" 
+                                               placeholder="Enter your phone number">
+                                    </div>
                                 </div>
-                                <div class="form-group">
-                                    <input type="tel" class="form-control" name="phone" placeholder="Phone Number">
+                                
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label>Email Address *</label>
+                                        <input type="email" class="form-control" name="email" 
+                                               placeholder="your@email.com" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Country</label>
+                                        <input type="text" class="form-control" name="country" 
+                                               placeholder="Enter your country">
+                                    </div>
                                 </div>
-                            </div>
-                            
-                            <div class="form-row">
+                                
                                 <div class="form-group">
-                                    <input type="email" class="form-control" name="email" placeholder="Email Address *" required>
+                                    <label>Subject</label>
+                                    <input type="text" class="form-control" name="subject" 
+                                           placeholder="Enter message subject">
                                 </div>
+                                
                                 <div class="form-group">
-                                    <input type="text" class="form-control" name="country" placeholder="Country">
+                                    <label>Your Message *</label>
+                                    <textarea class="form-control" name="message" rows="6" 
+                                              placeholder="Please describe your requirements in detail..." 
+                                              required minlength="10"></textarea>
                                 </div>
-                            </div>
-                            
-                            <div class="form-group">
-                                <input type="text" class="form-control" name="subject" placeholder="Subject">
-                            </div>
-                            
-                            <div class="form-group">
-                                <textarea class="form-control" name="message" placeholder="Your Message *" required minlength="10"></textarea>
-                            </div>
-                            
-                            <button type="submit" class="btn-submit" id="submitBtn">
-                                <span id="submitText">Send Message</span>
-                                <span id="loadingSpinner" class="loading" style="display: none;"></span>
-                            </button>
-                            
-                            <div class="form-message" id="formMessage"></div>
-                        </form>
+                                
+                                <button type="submit" class="btn-submit" id="submitBtn">
+                                    <span id="submitText">Send Message</span>
+                                    <span id="loadingSpinner" class="loading" style="display:none"></span>
+                                </button>
+                                
+                                <div class="form-message" id="formMessage"></div>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -832,8 +986,8 @@
                         <a href="tel:+8613998457008">+86 139 9845 7008</a>
                     </p>
                     <p>
-                        <i class="fas fa-phone-alt"></i>
-                        <a href="tel:+8641186757153">+86 411 86757153</a>
+                        <i class="fas fa-phone-flip"></i>
+                        <a href="tel:+8641186757153">+86 411 8675 7153</a>
                     </p>
                     <p>
                         <i class="fas fa-envelope"></i>
@@ -842,6 +996,10 @@
                     <p>
                         <i class="fas fa-map-marker-alt"></i>
                         6/F Manulife Place, 348 Kwun Tong Road, Kowloon, Hong Kong
+                    </p>
+                    <p>
+                        <i class="fas fa-clock"></i>
+                        24/7 Available - Always here to serve you
                     </p>
                 </div>
                 
@@ -854,14 +1012,13 @@
                         <a href="/services">Our Services</a>
                         <a href="/products">Products</a>
                         <a href="/contact">Contact Us</a>
-                        <a href="/careers">Careers</a>
                     </div>
                 </div>
                 
                 <!-- 公司简介 -->
                 <div class="footer-section footer-about">
                     <h3>About King Hitech</h3>
-                    <p>King Hitech Limited specializes in comprehensive marine services including ship supply, ship spares supply, ship repair, and dry docking services. With our headquarters in China and strategic locations worldwide, we provide professional solutions to the maritime industry.</p>
+                    <p>King Hitech Limited specializes in comprehensive marine services including ship supply, ship spares supply, ship repair, and dry docking services. With our headquarters in China and strategic locations worldwide, we provide professional 24/7 solutions to the maritime industry.</p>
                 </div>
             </div>
             
@@ -909,23 +1066,31 @@
                 }
             });
             
-            // 表单提交处理
+            // 表单提交处理 - 使用简化版的逻辑
             const contactForm = document.getElementById('contactForm');
             const submitBtn = document.getElementById('submitBtn');
             const submitText = document.getElementById('submitText');
             const loadingSpinner = document.getElementById('loadingSpinner');
             const formMessage = document.getElementById('formMessage');
             
+            // 实时验证
+            contactForm.addEventListener('input', function(e) {
+                const target = e.target;
+                if (target.hasAttribute('required')) {
+                    validateField(target);
+                }
+            });
+            
+            // 表单提交处理
             contactForm.addEventListener('submit', async function(e) {
                 e.preventDefault();
                 
-                // 表单验证
                 if (!validateForm()) {
                     return false;
                 }
                 
                 // 防止垃圾内容
-                const message = this.querySelector('[name="message"]').value;
+                const message = contactForm.querySelector('[name="message"]').value;
                 const spamKeywords = ['Hello. And Bye.', 'Test. Please ignore.', 'buy cheap', 'viagra', 'casino', 'porn'];
                 if (spamKeywords.some(keyword => 
                     message.toLowerCase().includes(keyword.toLowerCase()))) {
@@ -938,9 +1103,12 @@
                 showMessage('', '');
                 
                 try {
-                    const formData = new FormData(this);
+                    const formData = new FormData(contactForm);
                     
-                    const response = await fetch(this.action, {
+                    // 添加时间戳防止缓存
+                    formData.append('_timestamp', Date.now());
+                    
+                    const response = await fetch(contactForm.action, {
                         method: 'POST',
                         body: formData,
                         headers: {
@@ -950,11 +1118,11 @@
                     
                     if (response.ok) {
                         showMessage('Thank you! Your message has been sent successfully. We will get back to you soon.', 'success');
-                        this.reset();
+                        contactForm.reset();
                         
-                        // 3秒后滚动到顶部
+                        // 3秒后跳转到成功页面
                         setTimeout(() => {
-                            window.scrollTo({ top: 0, behavior: 'smooth' });
+                            window.location.href = '/submission-successful.html';
                         }, 3000);
                         
                     } else {
@@ -995,11 +1163,20 @@
                 return isValid;
             }
             
+            function validateField(field) {
+                const value = field.value.trim();
+                
+                if (field.type === 'email' && value) {
+                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    markFieldError(field, value && !emailRegex.test(value));
+                }
+            }
+            
             function markFieldError(field, isError) {
                 if (isError) {
-                    field.style.borderColor = '#dc3545';
+                    field.classList.add('error');
                 } else {
-                    field.style.borderColor = '';
+                    field.classList.remove('error');
                 }
             }
             
@@ -1009,12 +1186,18 @@
                 if (type) {
                     formMessage.classList.add(type);
                 }
+                formMessage.style.display = text ? 'block' : 'none';
             }
             
             function setLoading(loading) {
                 submitBtn.disabled = loading;
-                submitText.style.display = loading ? 'none' : 'inline';
-                loadingSpinner.style.display = loading ? 'inline-block' : 'none';
+                if (loading) {
+                    submitText.style.display = 'none';
+                    loadingSpinner.style.display = 'inline-block';
+                } else {
+                    submitText.style.display = 'inline';
+                    loadingSpinner.style.display = 'none';
+                }
             }
             
             // 实时表单验证

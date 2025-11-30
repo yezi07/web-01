@@ -2,42 +2,18 @@
 <html lang="en" data-lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Contact Us - King Hitech | Professional Maritime Services</title>
-    <meta name="description" content="Contact King Hitech Limited for professional ship supply, spares supply, repair and dry docking services. 24/7 available for your marine needs.">
-    <meta name="keywords" content="contact ship supply, marine spares contact, ship repair contact, dry docking services">
+    <title>King Hitech | Professional Maritime Services</title>
+    <meta name="description" content="King Hitech Limited - Professional ship supply, spares supply, repair and dry docking services. 24/7 available for your marine needs.">
+    <meta name="keywords" content="ship supply, marine spares, ship repair, dry docking services">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    
-    <!-- 网站图标 - 根据您的实际文件结构修正 -->
-    <!-- 主图标 -->
-    <link rel="shortcut icon" href="/my-favicon/favicon.ico" type="image/x-icon">
-    <link rel="icon" type="image/x-icon" href="/my-favicon/favicon.ico">
-    
-    <!-- 标准图标 -->
-    <link rel="icon" type="image/png" sizes="96x96" href="/my-favicon/favicon-96x96.png">
-    <link rel="icon" type="image/svg+xml" href="/my-favicon/favicon.svg">
-    
-    <!-- Apple Touch Icons - Safari必需 -->
-    <link rel="apple-touch-icon" href="/my-favicon/apple-touch-icon.png">
-    <link rel="apple-touch-icon" sizes="192x192" href="/my-favicon/web-app-manifest-192x192.png">
-    <link rel="apple-touch-icon" sizes="512x512" href="/my-favicon/web-app-manifest-512x512.png">
-    
-    <!-- Web App Manifest -->
-    <link rel="manifest" href="/my-favicon/site.webmanifest">
-    
-    <!-- Safari主题配置 -->
-    <meta name="theme-color" content="#2050a4">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="default">
-    <meta name="apple-mobile-web-app-title" content="King Hitech">
-    <meta name="format-detection" content="telephone=no">
     
     <!-- 字体和图标 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     
     <style>
-        /* 基础样式和变量 */
+        /* 基础样式和变量 - 与联系页面保持一致 */
         :root {
             --primary-color: #2050a4;
             --secondary-color: #2b80ff;
@@ -88,6 +64,7 @@
         img {
             max-width: 100%;
             height: auto;
+            display: block;
         }
         
         .container {
@@ -96,7 +73,7 @@
             padding: 0 20px;
         }
         
-        /* 顶部导航栏 */
+        /* 顶部导航栏 - 与联系页面保持一致 */
         .header {
             background: var(--bg-light);
             box-shadow: var(--shadow-light);
@@ -243,32 +220,51 @@
         .main-content {
             margin-top: 120px;
             min-height: calc(100vh - 200px);
-            padding: 50px 0;
         }
         
-        .page-header {
-            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
-            color: var(--text-light);
-            padding: 100px 0;
+        /* 英雄区域 - 全屏大图 */
+        .hero-section {
+            position: relative;
+            height: 90vh;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        
+        .hero-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(32, 80, 164, 0.7), rgba(43, 128, 255, 0.7)), 
+                        url('https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') no-repeat center center;
+            background-size: cover;
+            z-index: -1;
+        }
+        
+        .hero-content {
             text-align: center;
-            margin-bottom: 60px;
-            border-radius: var(--border-radius);
+            color: var(--text-light);
+            max-width: 800px;
+            padding: 0 20px;
+            z-index: 1;
         }
         
-        .page-header h1 {
+        .hero-content h1 {
             font-size: 3.5rem;
             margin-bottom: 20px;
             font-weight: 700;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
         }
         
-        .page-header p {
+        .hero-content p {
             font-size: 1.3rem;
             margin-bottom: 30px;
             opacity: 0.95;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
+            line-height: 1.8;
         }
         
         .btn {
@@ -288,16 +284,60 @@
             box-shadow: var(--shadow-medium);
         }
         
-        /* 联系表单区域 */
-        .contact-section {
-            background: var(--bg-gray);
-            padding: 80px 0;
+        /* 介绍区域 */
+        .intro-section {
+            padding: 100px 0;
+            background: var(--bg-light);
+        }
+        
+        .intro-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        
+        .intro-content h2 {
+            font-size: 2.8rem;
+            color: var(--primary-color);
+            margin-bottom: 25px;
+            font-weight: 700;
+        }
+        
+        .intro-content p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            color: #666;
+        }
+        
+        .intro-image {
             border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-medium);
+            height: 400px;
+        }
+        
+        .intro-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .intro-image:hover img {
+            transform: scale(1.05);
+        }
+        
+        /* 服务模块区域 - 竖排布局 */
+        .services-section {
+            padding: 100px 0;
+            background: var(--bg-gray);
         }
         
         .section-title {
             text-align: center;
-            margin-bottom: 50px;
+            margin-bottom: 70px;
         }
         
         .section-title h2 {
@@ -315,177 +355,92 @@
             line-height: 1.8;
         }
         
-        .contact-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 50px;
-            align-items: stretch;
+        .services-container {
+            display: flex;
+            flex-direction: column;
+            gap: 60px;
         }
         
-        .contact-info {
+        .service-module {
             background: var(--bg-light);
-            padding: 50px;
             border-radius: var(--border-radius);
+            overflow: hidden;
             box-shadow: var(--shadow-light);
-            display: flex;
-            flex-direction: column;
-            height: 100%;
-        }
-        
-        .contact-info h3 {
-            color: var(--primary-color);
-            margin-bottom: 35px;
-            font-size: 1.8rem;
-            font-weight: 600;
-        }
-        
-        .contact-items {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-        
-        .contact-item {
-            display: flex;
-            align-items: flex-start;
-            margin-bottom: 30px;
-            gap: 20px;
-        }
-        
-        .contact-icon {
-            width: 60px;
-            height: 60px;
-            background: var(--primary-color);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--text-light);
-            font-size: 1.4rem;
-            flex-shrink: 0;
-        }
-        
-        .contact-details h4 {
-            margin-bottom: 8px;
-            color: var(--text-dark);
-            font-size: 1.1rem;
-            font-weight: 600;
-        }
-        
-        .contact-details a, .contact-details p {
-            color: var(--secondary-color);
-            font-size: 1rem;
-        }
-        
-        .contact-details a:hover {
-            color: var(--primary-color);
-        }
-        
-        /* 表单样式 */
-        .contact-form {
-            background: var(--bg-light);
-            padding: 50px;
-            border-radius: var(--border-radius);
-            box-shadow: var(--shadow-light);
-            display: flex;
-            flex-direction: column;
-            height: 100%;
-        }
-        
-        .contact-form h3 {
-            color: var(--primary-color);
-            margin-bottom: 35px;
-            font-size: 1.8rem;
-            font-weight: 600;
-        }
-        
-        .form-content {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-        }
-        
-        .form-group {
-            margin-bottom: 25px;
-        }
-        
-        .form-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-        }
-        
-        .form-control {
-            width: 100%;
-            padding: 15px;
-            border: 2px solid var(--border-color);
-            border-radius: var(--border-radius);
-            font-size: 16px;
             transition: var(--transition);
-            font-family: inherit;
         }
         
-        .form-control:focus {
-            border-color: var(--secondary-color);
-            box-shadow: 0 0 0 3px rgba(43, 128, 255, 0.1);
-            outline: none;
-        }
-        
-        textarea.form-control {
-            resize: vertical;
-            min-height: 140px;
-            font-family: inherit;
-        }
-        
-        .btn-submit {
-            width: 100%;
-            padding: 18px;
-            background: var(--primary-color);
-            color: var(--text-light);
-            border-radius: var(--border-radius);
-            font-size: 1.1rem;
-            font-weight: 600;
-            transition: var(--transition);
-            margin-top: auto;
-        }
-        
-        .btn-submit:hover {
-            background: var(--secondary-color);
-            transform: translateY(-2px);
+        .service-module:hover {
+            transform: translateY(-5px);
             box-shadow: var(--shadow-medium);
         }
         
-        .btn-submit:disabled {
-            background: #ccc;
-            cursor: not-allowed;
-            transform: none;
-            box-shadow: none;
+        .service-content {
+            padding: 40px;
         }
         
-        .form-message {
-            margin-top: 20px;
+        .service-content h3 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        .service-content p {
+            line-height: 1.8;
+            color: #666;
+            margin-bottom: 25px;
+            font-size: 1.1rem;
+        }
+        
+        /* 横向滚动图片区域 */
+        .service-images {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scrollbar-width: thin;
+            scrollbar-color: var(--primary-color) var(--bg-gray);
             padding: 15px;
+            gap: 20px;
+            height: 300px;
+            background: var(--bg-light);
+        }
+        
+        .service-images::-webkit-scrollbar {
+            height: 8px;
+        }
+        
+        .service-images::-webkit-scrollbar-track {
+            background: var(--bg-gray);
+            border-radius: 10px;
+        }
+        
+        .service-images::-webkit-scrollbar-thumb {
+            background: var(--primary-color);
+            border-radius: 10px;
+        }
+        
+        .service-image {
+            flex: 0 0 auto;
+            width: 400px;
+            height: 100%;
             border-radius: var(--border-radius);
-            display: none;
-            font-size: 1rem;
+            overflow: hidden;
+            scroll-snap-align: start;
+            box-shadow: var(--shadow-light);
         }
         
-        .form-message.success {
-            background: #d4edda;
-            color: #155724;
-            border: 1px solid #c3e6cb;
-            display: block;
+        .service-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
         }
         
-        .form-message.error {
-            background: #f8d7da;
-            color: #721c24;
-            border: 1px solid #f5c6cb;
-            display: block;
+        .service-image:hover img {
+            transform: scale(1.05);
         }
         
-        /* 底部导航栏 */
+        /* 底部导航栏 - 与联系页面保持一致 */
         .footer {
             background: var(--bg-dark);
             color: var(--text-light);
@@ -601,16 +556,23 @@
                 font-size: 17px;
             }
             
-            .page-header h1 {
+            .hero-content h1 {
                 font-size: 3rem;
             }
             
-            .contact-container {
+            .intro-container {
                 gap: 40px;
+            }
+            
+            .service-images {
+                height: 250px;
+            }
+            
+            .service-image {
+                width: 350px;
             }
         }
         
-        /* 移动端样式修正 */
         @media (max-width: 768px) {
             .header-container {
                 min-height: 85px;
@@ -647,38 +609,42 @@
             
             .main-content {
                 margin-top: 105px;
-                padding: 30px 0;
             }
             
-            .page-header {
-                padding: 80px 0;
-                margin-bottom: 40px;
+            .hero-section {
+                height: 70vh;
+                min-height: 500px;
             }
             
-            .page-header h1 {
+            .hero-content h1 {
                 font-size: 2.5rem;
             }
             
-            .page-header p {
+            .hero-content p {
                 font-size: 1.1rem;
+            }
+            
+            .intro-section, .services-section {
+                padding: 60px 0;
+            }
+            
+            .intro-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
             }
             
             .section-title h2 {
                 font-size: 2.2rem;
             }
             
-            .contact-container {
-                grid-template-columns: 1fr;
-                gap: 40px;
+            .service-images {
+                padding: 10px;
+                height: 220px;
+                gap: 15px;
             }
             
-            .contact-info,
-            .contact-form {
-                padding: 40px;
-            }
-            
-            .form-row {
-                grid-template-columns: 1fr;
+            .service-image {
+                width: 300px;
             }
             
             .footer {
@@ -688,43 +654,6 @@
             .footer-content {
                 grid-template-columns: 1fr;
                 gap: 40px;
-            }
-            
-            /* 移动端电话不居中对齐 - 保持左对齐 */
-            .contact-item {
-                flex-direction: row;
-                text-align: left;
-                align-items: flex-start;
-                gap: 15px;
-            }
-            
-            .contact-details {
-                text-align: left;
-                width: 100%;
-            }
-            
-            .contact-details h4,
-            .contact-details a,
-            .contact-details p {
-                text-align: left;
-            }
-            
-            /* 移动端底部图标不居中对齐 */
-            .footer-contact p {
-                justify-content: flex-start;
-                text-align: left;
-            }
-            
-            /* 移动端About King部分不左移，保持正常对齐 */
-            .footer-about {
-                margin-left: 0;
-            }
-        }
-        
-        /* 桌面端About King部分微调 */
-        @media (min-width: 769px) {
-            .footer-about {
-                margin-left: -10px;
             }
         }
         
@@ -741,34 +670,35 @@
             
             .main-content {
                 margin-top: 100px;
-                padding: 20px 0;
             }
             
-            .page-header {
-                padding: 60px 0;
+            .hero-section {
+                height: 60vh;
+                min-height: 400px;
             }
             
-            .page-header h1 {
+            .hero-content h1 {
                 font-size: 2.2rem;
             }
             
-            .page-header p {
+            .hero-content p {
                 font-size: 1rem;
             }
             
-            .contact-info,
-            .contact-form {
+            .intro-section, .services-section {
+                padding: 40px 0;
+            }
+            
+            .service-content {
                 padding: 30px 20px;
             }
             
-            .contact-item {
-                margin-bottom: 25px;
+            .service-images {
+                height: 200px;
             }
             
-            .contact-icon {
-                width: 50px;
-                height: 50px;
-                font-size: 1.2rem;
+            .service-image {
+                width: 280px;
             }
             
             .footer-container {
@@ -810,21 +740,6 @@
                 transform: translateY(0);
             }
         }
-        
-        /* 加载动画 */
-        .loading {
-            display: inline-block;
-            width: 20px;
-            height: 20px;
-            border: 3px solid rgba(255,255,255,.3);
-            border-radius: 50%;
-            border-top-color: #fff;
-            animation: spin 1s ease-in-out infinite;
-        }
-        
-        @keyframes spin {
-            to { transform: rotate(360deg); }
-        }
     </style>
 </head>
 <body>
@@ -834,18 +749,18 @@
             <div class="header-container">
                 <div class="logo">
                     <a href="/">
-                        <img src="/image/logo.jpg" alt="King Hitech" 
-                             onerror="this.src='https://via.placeholder.com/280x70/2050a4/ffffff?text=King+Hitech'">
+                        <img src="/image/logo.jpg" alt="King Hitech">
+                    
                     </a>
                 </div>
                 
                 <!-- 桌面端导航 -->
                 <nav class="nav-desktop">
-                    <a href="/">Home</a>
+                    <a href="/" class="active">Home</a>
                     <a href="/about">About Us</a>
                     <a href="/services">Services</a>
                     <a href="/products">Products</a>
-                    <a href="/contact" class="active">Contact Us</a>
+                    <a href="/contact">Contact Us</a>
                 </nav>
                 
                 <!-- 移动端菜单切换 -->
@@ -858,150 +773,134 @@
             
             <!-- 移动端导航菜单 -->
             <nav class="nav-mobile" id="navMobile">
-                <a href="/">Home</a>
+                <a href="/" class="active">Home</a>
                 <a href="/about">About Us</a>
                 <a href="/services">Services</a>
                 <a href="/products">Products</a>
-                <a href="/contact" class="active">Contact Us</a>
+                <a href="/contact">Contact Us</a>
             </nav>
         </div>
     </header>
 
     <!-- 主要内容区域 -->
     <main class="main-content">
-        <div class="container">
-            <!-- 页面头部 -->
-            <section class="page-header animate-fade-in">
-                <div class="page-header-content">
-                    <h1>Professional Maritime Services Worldwide</h1>
-                    <p>Your trusted partner in ship spares supply and repair services.
-                        Get in touch with our maritime experts.
-                        We're available 24/7 to provide professional solutions for your needs.</p>
-                    <a href="#contact-form" class="btn">Send Message</a>
+        <!-- 英雄区域 - 全屏大图 -->
+        <section class="hero-section">
+            <div class="hero-background"></div>
+            <div class="hero-content animate-fade-in">
+                <h1>Professional Maritime Services Worldwide</h1>
+                <p>Your trusted partner in ship spares supply and repair services. With over 20 years of experience, we provide comprehensive solutions for the maritime industry.</p>
+                <!-- 移除了按钮 -->
+            </div>
+        </section>
+        
+        <!-- 介绍区域 -->
+        <section class="intro-section">
+            <div class="container">
+                <div class="intro-container animate-slide-up">
+                    <div class="intro-content">
+                        <h2>About King Hitech</h2>
+                        <p>King Hitech Limited is a leading provider of maritime services with headquarters in Hong Kong and strategic locations worldwide. We specialize in ship supply, ship spares supply, ship repair, and dry docking services.</p>
+                        <p>Our team of experienced professionals is available 24/7 to ensure your vessels operate at peak efficiency. We understand the critical nature of maritime operations and are committed to delivering timely, reliable solutions.</p>
+                        <p>With a global network of suppliers and partners, we can source and deliver high-quality marine equipment and spare parts to any port worldwide, ensuring minimal downtime for your operations.</p>
+                        <a href="/about" class="btn">Learn More</a>
+                    </div>
+                    <div class="intro-image">
+                        
+                    </div>
                 </div>
-            </section>
-            
-            <!-- 联系表单区域 -->
-            <section id="contact-form" class="contact-section animate-slide-up">
+            </div>
+        </section>
+        
+        <!-- 服务模块区域 - 竖排布局 -->
+        <section id="services" class="services-section">
+            <div class="container">
                 <div class="section-title">
-                    <h2>Get In Touch</h2>
-                    <p>Our team is available around the clock to assist with your maritime service requirements. Fill out the form below and we'll respond promptly.</p>
+                    <h2>Our Services</h2>
+                    <p>We offer comprehensive maritime solutions tailored to meet the specific needs of ship owners and operators worldwide.</p>
                 </div>
                 
-                <div class="contact-container">
-                    <!-- 联系信息 -->
-                    <div class="contact-info">
-                        <h3>Contact Information</h3>
-                        <div class="contact-items">
-                            <div>
-                                <div class="contact-item">
-                                    <div class="contact-icon">
-                                        <i class="fas fa-phone"></i>
-                                    </div>
-                                    <div class="contact-details">
-                                        <h4>Phone Numbers</h4>
-                                        <p>
-                                            <a href="tel:+8613998457008">+86 139 9845 7008</a><br>
-                                            <a href="tel:+8641186757153">+86 411 8675 7153</a>
-                                        </p>
-                                    </div>
-                                </div>
+                <div class="services-container">
+                    <!-- 服务模块 1 -->
+                    <div class="service-module animate-slide-up">
+                        <div class="service-content">
+                            <h3>Ship Supply & Spares</h3>
+                            <p>We provide a complete range of ship supplies and spare parts, ensuring your vessels have everything they need for smooth operations. Our global network allows us to source and deliver quality products efficiently.</p>
+                            <p>From engine parts to deck equipment, we offer reliable solutions with competitive pricing and fast delivery times. Our inventory includes genuine OEM parts and high-quality alternatives to meet various budgets and requirements.</p>
+                        </div>
+                        <div class="service-images">
+                            <div class="service-image">
                                 
-                                <div class="contact-item">
-                                    <div class="contact-icon">
-                                        <i class="fas fa-envelope"></i>
-                                    </div>
-                                    <div class="contact-details">
-                                        <h4>Email Address</h4>
-                                        <p><a href="mailto:huang.yongqiang@zy-engineering.com">huang.yongqiang@zy-engineering.com</a></p>
-                                    </div>
-                                </div>
+                            </div>
+                            <div class="service-image">
                                 
-                                <div class="contact-item">
-                                    <div class="contact-icon">
-                                        <i class="fas fa-map-marker-alt"></i>
-                                    </div>
-                                    <div class="contact-details">
-                                        <h4>Headquarters</h4>
-                                        <p>6/F Manulife Place, 348 Kwun Tong Road, Kowloon, Hong Kong</p>
-                                    </div>
-                                </div>
+                            </div>
+                            <div class="service-image">
                                 
-                                <div class="contact-item">
-                                    <div class="contact-icon">
-                                        <i class="fas fa-clock"></i>
-                                    </div>
-                                    <div class="contact-details">
-                                        <h4>Business Hours</h4>
-                                        <p>24/7 Available - We're here for you anytime, day or night</p>
-                                    </div>
-                                </div>
+                            </div>
+                            <div class="service-image">
+                                
+                            </div>
+                            <div class="service-image">
+                                
                             </div>
                         </div>
                     </div>
                     
-                    <!-- 联系表单 -->
-                    <div class="contact-form">
-                        <h3>Send Us a Message</h3>
-                        <div class="form-content">
-                            <form id="contactForm" action="https://formspree.io/f/xzzlqnpk" method="POST">
-                                <!-- Formspree 配置字段 -->
-                                <input type="hidden" name="_subject" value="King Hitech - New Customer Inquiry">
-                                <input type="hidden" name="_language" value="zh">
-                                <input type="text" name="_gotcha" style="display:none">
+                    <!-- 服务模块 2 -->
+                    <div class="service-module animate-slide-up">
+                        <div class="service-content">
+                            <h3>Repair & Dry Docking</h3>
+                            <p>Our ship repair and dry docking services ensure your vessels remain in optimal condition. We work with certified technicians and use state-of-the-art equipment to deliver high-quality repairs.</p>
+                            <p>Whether it's routine maintenance or emergency repairs, our team is equipped to handle projects of any scale with precision and efficiency. Our facilities are equipped to accommodate vessels of various sizes and types.</p>
+                        </div>
+                        <div class="service-images">
+                            <div class="service-image">
                                 
-                                <!-- 完整版原有字段 -->
-                                <div class="form-row">
-                                    <div class="form-group">
-                                        <label>Full Name *</label>
-                                        <input type="text" class="form-control" name="name" 
-                                               placeholder="Enter your full name" required>
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Phone Number</label>
-                                        <input type="tel" class="form-control" name="phone" 
-                                               placeholder="Enter your phone number">
-                                    </div>
-                                </div>
+                            </div>
+                            <div class="service-image">
                                 
-                                <div class="form-row">
-                                    <div class="form-group">
-                                        <label>Email Address *</label>
-                                        <input type="email" class="form-control" name="email" 
-                                               placeholder="your@email.com" required>
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Country</label>
-                                        <input type="text" class="form-control" name="country" 
-                                               placeholder="Enter your country">
-                                    </div>
-                                </div>
+                            </div>
+                            <div class="service-image">
                                 
-                                <div class="form-group">
-                                    <label>Subject</label>
-                                    <input type="text" class="form-control" name="user_subject" 
-                                           placeholder="Enter message subject">
-                                </div>
+                            </div>
+                            <div class="service-image">
                                 
-                                <div class="form-group">
-                                    <label>Your Message *</label>
-                                    <textarea class="form-control" name="message" rows="6" 
-                                              placeholder="Please describe your requirements in detail..." 
-                                              required minlength="10"></textarea>
-                                </div>
+                            </div>
+                            <div class="service-image">
                                 
-                                <button type="submit" class="btn-submit" id="submitBtn">
-                                    <span id="submitText">Send Message</span>
-                                    <span id="loadingSpinner" class="loading" style="display:none"></span>
-                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 服务模块 3 -->
+                    <div class="service-module animate-slide-up">
+                        <div class="service-content">
+                            <h3>Technical Support</h3>
+                            <p>Our technical support team provides expert assistance for all your maritime needs. From troubleshooting to technical consultations, we're here to help you overcome any operational challenges.</p>
+                            <p>With 24/7 availability and deep industry expertise, we ensure your vessels operate safely and efficiently at all times. Our engineers are available for on-site support when needed.</p>
+                        </div>
+                        <div class="service-images">
+                            <div class="service-image">
                                 
-                                <div class="form-message" id="formMessage"></div>
-                            </form>
+                            </div>
+                            <div class="service-image">
+                                
+                            </div>
+                            <div class="service-image">
+                                
+                            </div>
+                            <div class="service-image">
+                                
+                            </div>
+                            <div class="service-image">
+                                
+                            </div>
                         </div>
                     </div>
                 </div>
-            </section>
-        </div>
+            </div>
+        </section>
     </main>
 
     <!-- 底部导航栏 -->
@@ -1045,7 +944,7 @@
                     </div>
                 </div>
                 
-                <!-- 公司简介 - 桌面端微调，移动端正常对齐 -->
+                <!-- 公司简介 -->
                 <div class="footer-section footer-about">
                     <h3>About King Hitech</h3>
                     <p>King Hitech Limited specializes in comprehensive marine services including ship supply, ship spares supply, ship repair, and dry docking services. With our headquarters in China and strategic locations worldwide, we provide professional 24/7 solutions to the maritime industry.</p>
@@ -1096,151 +995,6 @@
                 }
             });
             
-            // 表单提交处理
-            const contactForm = document.getElementById('contactForm');
-            const submitBtn = document.getElementById('submitBtn');
-            const submitText = document.getElementById('submitText');
-            const loadingSpinner = document.getElementById('loadingSpinner');
-            const formMessage = document.getElementById('formMessage');
-            
-            // 实时验证
-            contactForm.addEventListener('input', function(e) {
-                const target = e.target;
-                if (target.hasAttribute('required')) {
-                    validateField(target);
-                }
-            });
-            
-            // 表单提交处理
-            contactForm.addEventListener('submit', async function(e) {
-                e.preventDefault();
-                
-                if (!validateForm()) {
-                    return false;
-                }
-                
-                // 防止垃圾内容
-                const message = contactForm.querySelector('[name="message"]').value;
-                const spamKeywords = ['Hello. And Bye.', 'Test. Please ignore.', 'buy cheap', 'viagra', 'casino', 'porn'];
-                if (spamKeywords.some(keyword => 
-                    message.toLowerCase().includes(keyword.toLowerCase()))) {
-                    showMessage('Please provide a meaningful message', 'error');
-                    return false;
-                }
-                
-                // 显示加载状态
-                setLoading(true);
-                showMessage('', '');
-                
-                try {
-                    const formData = new FormData(contactForm);
-                    
-                    // 添加时间戳防止缓存
-                    formData.append('_timestamp', Date.now());
-                    
-                    const response = await fetch(contactForm.action, {
-                        method: 'POST',
-                        body: formData,
-                        headers: {
-                            'Accept': 'application/json'
-                        }
-                    });
-                    
-                    if (response.ok) {
-                        showMessage('Thank you! Your message has been sent successfully. We will get back to you soon.', 'success');
-                        contactForm.reset();
-                        
-                        // 3秒后跳转到成功页面
-                        setTimeout(() => {
-                            window.location.href = '/submission-successful.html';
-                        }, 3000);
-                        
-                    } else {
-                        throw new Error('Submission failed');
-                    }
-                    
-                } catch (error) {
-                    console.error('Form submission error:', error);
-                    showMessage('Sorry, there was an error sending your message. Please try again or contact us directly.', 'error');
-                } finally {
-                    setLoading(false);
-                }
-            });
-            
-            function validateForm() {
-                let isValid = true;
-                const requiredFields = contactForm.querySelectorAll('[required]');
-                
-                requiredFields.forEach(field => {
-                    if (!field.value.trim()) {
-                        markFieldError(field, true);
-                        isValid = false;
-                    } else {
-                        markFieldError(field, false);
-                    }
-                });
-                
-                // 邮箱格式验证
-                const emailField = contactForm.querySelector('[type="email"]');
-                if (emailField.value.trim()) {
-                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                    if (!emailRegex.test(emailField.value)) {
-                        markFieldError(emailField, true);
-                        isValid = false;
-                    }
-                }
-                
-                return isValid;
-            }
-            
-            function validateField(field) {
-                const value = field.value.trim();
-                
-                if (field.type === 'email' && value) {
-                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                    markFieldError(field, value && !emailRegex.test(value));
-                }
-            }
-            
-            function markFieldError(field, isError) {
-                if (isError) {
-                    field.classList.add('error');
-                } else {
-                    field.classList.remove('error');
-                }
-            }
-            
-            function showMessage(text, type) {
-                formMessage.textContent = text;
-                formMessage.className = 'form-message';
-                if (type) {
-                    formMessage.classList.add(type);
-                }
-                formMessage.style.display = text ? 'block' : 'none';
-            }
-            
-            function setLoading(loading) {
-                submitBtn.disabled = loading;
-                if (loading) {
-                    submitText.style.display = 'none';
-                    loadingSpinner.style.display = 'inline-block';
-                } else {
-                    submitText.style.display = 'inline';
-                    loadingSpinner.style.display = 'none';
-                }
-            }
-            
-            // 实时表单验证
-            contactForm.querySelectorAll('input, textarea').forEach(field => {
-                field.addEventListener('blur', function() {
-                    if (this.hasAttribute('required') && !this.value.trim()) {
-                        markFieldError(this, true);
-                    } else {
-                        markFieldError(this, false);
-                    }
-                });
-            });
-            
             // 平滑滚动
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function (e) {
@@ -1252,6 +1006,14 @@
                             block: 'start'
                         });
                     }
+                });
+            });
+
+            // 图片加载错误处理
+            document.querySelectorAll('img').forEach(img => {
+                img.addEventListener('error', function() {
+                    this.src = 'https://via.placeholder.com/500x300/2050a4/ffffff?text=King+Hitech';
+                    this.alt = 'King Hitech - Professional Maritime Services';
                 });
             });
         });

@@ -8,14 +8,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     
-    <!-- 网站图标 - 修改为正确的路径 -->
-    <link rel="icon" type="image/png" href="/my-favicon/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="/my-favicon/favicon.svg" />
-    <link rel="shortcut icon" href="/my-favicon/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/my-favicon/apple-touch-icon.png" />
-    <meta name="apple-mobile-web-app-title" content="king-hitech" />
-    <link rel="manifest" href="/my-favicon/site.webmanifest" />
-
+    <!-- 网站图标 - 根据您的实际文件结构修正 -->
+    <!-- 主图标 -->
+    <link rel="shortcut icon" href="/my-favicon/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/x-icon" href="/my-favicon/favicon.ico">
+    
+    <!-- 标准图标 -->
+    <link rel="icon" type="image/png" sizes="96x96" href="/my-favicon/favicon-96x96.png">
+    <link rel="icon" type="image/svg+xml" href="/my-favicon/favicon.svg">
+    
+    <!-- Apple Touch Icons - Safari必需 -->
+    <link rel="apple-touch-icon" href="/my-favicon/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="192x192" href="/my-favicon/web-app-manifest-192x192.png">
+    <link rel="apple-touch-icon" sizes="512x512" href="/my-favicon/web-app-manifest-512x512.png">
+    
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="/my-favicon/site.webmanifest">
+    
+    <!-- Safari主题配置 -->
+    <meta name="theme-color" content="#2050a4">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="King Hitech">
+    <meta name="format-detection" content="telephone=no">
     
     <!-- 字体和图标 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -304,7 +319,7 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 50px;
-            align-items: stretch; /* 确保两栏等高 */
+            align-items: stretch;
         }
         
         .contact-info {
@@ -314,7 +329,7 @@
             box-shadow: var(--shadow-light);
             display: flex;
             flex-direction: column;
-            height: 100%; /* 确保高度100% */
+            height: 100%;
         }
         
         .contact-info h3 {
@@ -325,10 +340,10 @@
         }
         
         .contact-items {
-            flex: 1; /* 让内容区域填充剩余空间 */
+            flex: 1;
             display: flex;
             flex-direction: column;
-            justify-content: space-between; /* 均匀分布内容 */
+            justify-content: space-between;
         }
         
         .contact-item {
@@ -375,7 +390,7 @@
             box-shadow: var(--shadow-light);
             display: flex;
             flex-direction: column;
-            height: 100%; /* 确保高度100% */
+            height: 100%;
         }
         
         .contact-form h3 {
@@ -386,7 +401,7 @@
         }
         
         .form-content {
-            flex: 1; /* 让表单内容填充剩余空间 */
+            flex: 1;
             display: flex;
             flex-direction: column;
         }
@@ -432,7 +447,7 @@
             font-size: 1.1rem;
             font-weight: 600;
             transition: var(--transition);
-            margin-top: auto; /* 将按钮推到底部 */
+            margin-top: auto;
         }
         
         .btn-submit:hover {
@@ -595,6 +610,7 @@
             }
         }
         
+        /* 移动端样式修正 */
         @media (max-width: 768px) {
             .header-container {
                 min-height: 85px;
@@ -674,32 +690,39 @@
                 gap: 40px;
             }
             
-            /* 移动端电话不居中对齐 - 修复问题1 */
+            /* 移动端电话不居中对齐 - 保持左对齐 */
             .contact-item {
-                flex-direction: row; /* 保持水平布局 */
-                text-align: left; /* 文字左对齐 */
-                align-items: flex-start; /* 顶部对齐 */
+                flex-direction: row;
+                text-align: left;
+                align-items: flex-start;
                 gap: 15px;
             }
             
             .contact-details {
-                text-align: left; /* 文字左对齐 */
+                text-align: left;
                 width: 100%;
             }
             
             .contact-details h4,
             .contact-details a,
             .contact-details p {
-                text-align: left; /* 文字左对齐 */
+                text-align: left;
             }
             
             /* 移动端底部图标不居中对齐 */
             .footer-contact p {
-                justify-content: flex-start; /* 左对齐 */
+                justify-content: flex-start;
                 text-align: left;
             }
             
-            /* About King部分向左移动 - 修复问题3 */
+            /* 移动端About King部分不左移，保持正常对齐 */
+            .footer-about {
+                margin-left: 0;
+            }
+        }
+        
+        /* 桌面端About King部分微调 */
+        @media (min-width: 769px) {
             .footer-about {
                 margin-left: -10px;
             }
@@ -921,9 +944,8 @@
                     <div class="contact-form">
                         <h3>Send Us a Message</h3>
                         <div class="form-content">
-                            <!-- 修改后的表单 - 修复subject字段问题 -->
                             <form id="contactForm" action="https://formspree.io/f/xzzlqnpk" method="POST">
-                                <!-- Formspree 配置字段 - 修改主题字段名避免冲突 -->
+                                <!-- Formspree 配置字段 -->
                                 <input type="hidden" name="_subject" value="King Hitech - New Customer Inquiry">
                                 <input type="hidden" name="_language" value="zh">
                                 <input type="text" name="_gotcha" style="display:none">
@@ -1023,8 +1045,8 @@
                     </div>
                 </div>
                 
-                <!-- 公司简介 - 向左移动 -->
-                <div class="footer-section footer-about" style="margin-left: -15px;">
+                <!-- 公司简介 - 桌面端微调，移动端正常对齐 -->
+                <div class="footer-section footer-about">
                     <h3>About King Hitech</h3>
                     <p>King Hitech Limited specializes in comprehensive marine services including ship supply, ship spares supply, ship repair, and dry docking services. With our headquarters in China and strategic locations worldwide, we provide professional 24/7 solutions to the maritime industry.</p>
                 </div>

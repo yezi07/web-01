@@ -2,41 +2,22 @@
 <html lang="en" data-lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Products - King Hitech | Professional Maritime Services</title>
-    <meta name="description" content="King Hitech Limited offers high-quality marine products including ship spares, equipment, and technical solutions for the maritime industry.">
+    <title>Products - King Hi-Tech | Professional Maritime Solutions</title>
+    <meta name="description" content="King Hi-Tech offers high-quality marine products including ship spares, equipment, and technical solutions for the maritime industry.">
     <meta name="keywords" content="marine products, ship spares, maritime equipment, technical solutions">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-    <!-- 网站图标 - 根据您的实际文件结构修正 -->
-    <!-- 主图标 -->
+    <!-- 网站图标 -->
     <link rel="shortcut icon" href="/my-favicon/favicon.ico" type="image/x-icon">
     <link rel="icon" type="image/x-icon" href="/my-favicon/favicon.ico">
     
-    <!-- 标准图标 -->
-    <link rel="icon" type="image/png" sizes="96x96" href="/my-favicon/favicon-96x96.png">
-    <link rel="icon" type="image/svg+xml" href="/my-favicon/favicon.svg">
-    
-    <!-- Apple Touch Icons - Safari必需 -->
-    <link rel="apple-touch-icon" href="/my-favicon/apple-touch-icon.png">
-    <link rel="apple-touch-icon" sizes="192x192" href="/my-favicon/web-app-manifest-192x192.png">
-    <link rel="apple-touch-icon" sizes="512x512" href="/my-favicon/web-app-manifest-512x512.png">
-    
-    <!-- Web App Manifest -->
-    <link rel="manifest" href="/my-favicon/site.webmanifest">
-    
-    <!-- Safari主题配置 -->
-    <meta name="theme-color" content="#2050a4">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="default">
-    <meta name="apple-mobile-web-app-title" content="King Hitech">
-    <meta name="format-detection" content="telephone=no">
     <!-- 字体和图标 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     
     <style>
-        /* 基础样式和变量 - 与首页保持一致 */
+        /* 基础样式和变量 - 与services页面保持一致 */
         :root {
             --primary-color: #2050a4;
             --secondary-color: #2b80ff;
@@ -96,7 +77,7 @@
             padding: 0 20px;
         }
         
-        /* 顶部导航栏 - 与首页保持一致 */
+        /* 顶部导航栏 - 与services页面保持一致 */
         .header {
             background: var(--bg-light);
             box-shadow: var(--shadow-light);
@@ -241,14 +222,15 @@
         
         /* 主要内容区域 */
         .main-content {
-            margin-top: 120px;
+            margin-top: 100px;
             min-height: calc(100vh - 200px);
         }
         
-        /* 简洁标语 */
+        /* 简洁标语 - 与services页面保持一致 */
         .slogan-section {
             padding: 60px 0 40px;
             text-align: center;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
         }
         
         .slogan-section h1 {
@@ -258,7 +240,15 @@
             margin-bottom: 20px;
         }
         
-        /* 产品介绍区域 */
+        .slogan-section p {
+            font-size: 1.2rem;
+            color: #555;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+        
+        /* 产品介绍区域 - 修改为纵向排列 */
         .products-intro {
             padding: 40px 0 80px;
             background: var(--bg-light);
@@ -267,7 +257,7 @@
         .products-container {
             display: flex;
             flex-direction: column;
-            gap: 60px;
+            gap: 40px;
         }
         
         .product-card {
@@ -277,18 +267,22 @@
             box-shadow: var(--shadow-light);
             transition: var(--transition);
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
+            height: auto;
+            min-height: 300px;
         }
         
         .product-card:hover {
-            transform: translateY(-10px);
+            transform: translateY(-5px);
             box-shadow: var(--shadow-medium);
         }
         
         .product-image {
-            height: 400px;
+            width: 40%;
+            min-height: 300px;
             overflow: hidden;
             position: relative;
+            flex-shrink: 0;
         }
         
         .product-image img {
@@ -307,25 +301,26 @@
             flex: 1;
             display: flex;
             flex-direction: column;
+            justify-content: center;
         }
         
-        .product-content h2 {
-            font-size: 2.2rem;
+        .product-content h3 {
+            font-size: 1.8rem;
             color: var(--primary-color);
             margin-bottom: 20px;
-            font-weight: 700;
+            font-weight: 600;
         }
         
         .product-content p {
-            line-height: 1.8;
+            line-height: 1.7;
             color: #666;
             margin-bottom: 25px;
-            flex: 1;
+            font-size: 1.1rem;
         }
         
         .product-features {
-            margin-top: auto;
-            padding-top: 20px;
+            margin-top: 15px;
+            padding-top: 15px;
             border-top: 1px solid var(--border-color);
         }
         
@@ -334,14 +329,14 @@
             padding: 0;
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 15px;
+            gap: 10px;
         }
         
         .product-features li {
-            margin-bottom: 12px;
+            margin-bottom: 10px;
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 10px;
             color: #555;
             font-size: 1rem;
         }
@@ -349,53 +344,12 @@
         .product-features i {
             color: var(--secondary-color);
             font-size: 1rem;
-            width: 20px;
-            text-align: center;
         }
         
-        .product-cta {
-            margin-top: 30px;
-            display: flex;
-            gap: 15px;
-        }
-        
-        .btn {
-            display: inline-block;
-            padding: 12px 30px;
-            border-radius: var(--border-radius);
-            font-weight: 600;
-            font-size: 1rem;
-            transition: var(--transition);
-        }
-        
-        .btn-primary {
-            background: var(--primary-color);
-            color: var(--text-light);
-        }
-        
-        .btn-primary:hover {
-            background: var(--secondary-color);
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-medium);
-        }
-        
-        .btn-secondary {
-            background: transparent;
-            color: var(--primary-color);
-            border: 2px solid var(--primary-color);
-        }
-        
-        .btn-secondary:hover {
-            background: var(--primary-color);
-            color: var(--text-light);
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-medium);
-        }
-        
-        /* 自动滚动图片区域 */
+        /* 自动滚动图片区域 - 与services页面保持一致 */
         .image-gallery-section {
             padding: 80px 0;
-            background: var(--bg-gray);
+            background: var(--bg-light);
         }
         
         .gallery-title {
@@ -429,7 +383,6 @@
             display: flex;
             width: max-content;
             height: 100%;
-            animation: scrollGallery 40s linear infinite;
         }
         
         .gallery-track:hover {
@@ -464,16 +417,7 @@
             transform: scale(1.1);
         }
         
-        @keyframes scrollGallery {
-            0% {
-                transform: translateX(0);
-            }
-            100% {
-                transform: translateX(calc(-400px * 10 - 20px * 9));
-            }
-        }
-        
-        /* 底部导航栏 - 与首页保持一致 */
+        /* 底部导航栏 - 与services页面保持一致 */
         .footer {
             background: var(--bg-dark);
             color: var(--text-light);
@@ -593,10 +537,6 @@
                 font-size: 2.5rem;
             }
             
-            .product-image {
-                height: 350px;
-            }
-            
             .product-features ul {
                 grid-template-columns: 1fr;
             }
@@ -656,20 +596,22 @@
                 padding: 30px 0 60px;
             }
             
-            .products-container {
-                gap: 40px;
+            .product-card {
+                flex-direction: column;
+                min-height: auto;
             }
             
             .product-image {
-                height: 300px;
+                width: 100%;
+                height: 250px;
             }
             
             .product-content {
                 padding: 30px;
             }
             
-            .product-content h2 {
-                font-size: 1.8rem;
+            .product-content h3 {
+                font-size: 1.6rem;
             }
             
             .gallery-title h2 {
@@ -718,21 +660,11 @@
             }
             
             .product-image {
-                height: 250px;
+                height: 200px;
             }
             
             .product-content {
                 padding: 25px 20px;
-            }
-            
-            .product-cta {
-                flex-direction: column;
-                gap: 10px;
-            }
-            
-            .btn {
-                width: 100%;
-                text-align: center;
             }
             
             .image-gallery {
@@ -790,14 +722,14 @@
         <div class="container">
             <div class="header-container">
                 <div class="logo">
-                    <a href="/">
-                        <!-- Logo 图片 -->
+                    <a href="/index-.html">
+                        <img src="/image/logo.jpg" alt="King Hitech">
                     </a>
                 </div>
                 
                 <!-- 桌面端导航 -->
                 <nav class="nav-desktop">
-                    <a href="/">Home</a>
+                    <a href="/index-.html">Home</a>
                     <a href="/about-us.html">About Us</a>
                     <a href="/services.html">Services</a>
                     <a href="/products.html" class="active">Products</a>
@@ -814,7 +746,7 @@
             
             <!-- 移动端导航菜单 -->
             <nav class="nav-mobile" id="navMobile">
-                <a href="/">Home</a>
+                <a href="/index-.html">Home</a>
                 <a href="/about-us.html">About Us</a>
                 <a href="/services.html">Services</a>
                 <a href="/products.html" class="active">Products</a>
@@ -829,38 +761,31 @@
         <section class="slogan-section animate-fade-in">
             <div class="container">
                 <h1>Premium Marine Products & Solutions</h1>
+                <p>King Hi-Tech specializes in the supply, manufacturing, and repair of marine diesel engine parts. Guided by our service philosophy of "Professional Assurance, Mission Accomplished," we deliver reliable and efficient maritime solutions to clients worldwide.</p>
             </div>
         </section>
         
-        <!-- 产品介绍区域 -->
+        <!-- 产品介绍区域 - 纵向排列的三块内容 -->
         <section class="products-intro">
             <div class="container">
                 <div class="products-container animate-slide-up">
                     <!-- 产品1 -->
                     <div class="product-card">
                         <div class="product-image">
-                            <!-- 图片占位 - 使用色块 -->
-                            <div style="width:100%; height:100%; background: linear-gradient(45deg, #2050a4, #2b80ff); display:flex; align-items:center; justify-content:center; color:white; font-size:24px; font-weight:bold;">
-                                Ship Spares & Equipment
-                            </div>
+                            <img src="/image/manufactory.jpg" alt="King Hitech">
                         </div>
                         <div class="product-content">
-                            <h2>Ship Spares & Equipment</h2>
-                            <p>We provide a comprehensive range of high-quality ship spares and equipment, ensuring your vessels operate at peak efficiency. Our products include engine parts, deck equipment, navigation systems, and safety gear from leading manufacturers worldwide.</p>
-                            <p>With our global sourcing network, we can provide OEM parts and reliable alternatives to meet various budgets and requirements, ensuring minimal downtime for your operations.</p>
-                            <div class="product-features">
+                            <h3>Engine Component Manufacturing</h3>
+                            <p>
+                                We professionally produce piston rods, piston heads, and core fuel/exhaust system components as authorized, licensed, and genuine parts. We strictly adhere to original factory standards, ensuring every product delivers excellent performance and reliable quality for a trustworthy alternative.
+                                </p>
+                                <div class="product-features">
                                 <ul>
-                                    <li><i class="fas fa-check"></i> Genuine OEM parts</li>
-                                    <li><i class="fas fa-check"></i> Quality alternatives</li>
-                                    <li><i class="fas fa-check"></i> Global sourcing network</li>
-                                    <li><i class="fas fa-check"></i> Fast delivery worldwide</li>
-                                    <li><i class="fas fa-check"></i> Competitive pricing</li>
-                                    <li><i class="fas fa-check"></i> Technical specifications</li>
+                                    <li><i class="fas fa-check"></i> Authorized licensed & genuine parts</li>
+                                    <li><i class="fas fa-check"></i> Original factory standards</li>
+                                    <li><i class="fas fa-check"></i> Piston rods & piston heads</li>
+                                    <li><i class="fas fa-check"></i> Fuel/exhaust system components</li>
                                 </ul>
-                            </div>
-                            <div class="product-cta">
-                                <a href="#" class="btn btn-primary">Request Quote</a>
-                                <a href="#" class="btn btn-secondary">View Catalog</a>
                             </div>
                         </div>
                     </div>
@@ -868,57 +793,37 @@
                     <!-- 产品2 -->
                     <div class="product-card">
                         <div class="product-image">
-                            <!-- 图片占位 - 使用色块 -->
-                            <div style="width:100%; height:100%; background: linear-gradient(45deg, #ff6b35, #ff8c5a); display:flex; align-items:center; justify-content:center; color:white; font-size:24px; font-weight:bold;">
-                                Marine Safety Equipment
-                            </div>
+                            <img src="/image/warehouse8.jpg" alt="King Hitech">
                         </div>
                         <div class="product-content">
-                            <h2>Marine Safety Equipment</h2>
-                            <p>Our comprehensive range of marine safety equipment ensures compliance with international regulations and the highest standards of crew safety. We offer life-saving appliances, fire-fighting equipment, and personal protective gear.</p>
-                            <p>All our safety products are certified and tested to meet SOLAS, MARPOL, and other international standards, providing peace of mind for ship owners and operators.</p>
+                            <h3>Parts Supply & Inventory</h3>
+                            <p>Comprehensive supply of marine diesel engine spare parts with strategic warehouses in Dalian and Shanghai ensuring rapid response to customer needs across China. Our dual-warehouse inventory system enables quick delivery and consistent high-quality service.</p>
                             <div class="product-features">
                                 <ul>
-                                    <li><i class="fas fa-check"></i> SOLAS compliant equipment</li>
-                                    <li><i class="fas fa-check"></i> Certified life-saving appliances</li>
-                                    <li><i class="fas fa-check"></i> Fire-fighting systems</li>
-                                    <li><i class="fas fa-check"></i> Personal protective equipment</li>
-                                    <li><i class="fas fa-check"></i> Regular maintenance services</li>
-                                    <li><i class="fas fa-check"></i> Certification documentation</li>
+                                    <li><i class="fas fa-check"></i> Dual-warehouse system</li>
+                                    <li><i class="fas fa-check"></i> Rapid response capability</li>
+                                    <li><i class="fas fa-check"></i> Extensive parts inventory</li>
+                                    <li><i class="fas fa-check"></i> Class certification available</li>
                                 </ul>
-                            </div>
-                            <div class="product-cta">
-                                <a href="#" class="btn btn-primary">Request Quote</a>
-                                <a href="#" class="btn btn-secondary">View Catalog</a>
                             </div>
                         </div>
                     </div>
                     
-                    <!-- 产品3 -->
+                    <!-- 产品3 - 保留技术解决方案 -->
                     <div class="product-card">
                         <div class="product-image">
-                            <!-- 图片占位 - 使用色块 -->
-                            <div style="width:100%; height:100%; background: linear-gradient(45deg, #34c759, #5cdb85); display:flex; align-items:center; justify-content:center; color:white; font-size:24px; font-weight:bold;">
-                                Technical Solutions
-                            </div>
+                            <img src="/image/service1.jpg" alt="King Hitech">
                         </div>
                         <div class="product-content">
-                            <h2>Technical Solutions</h2>
+                            <h3>Technical Solutions</h3>
                             <p>We offer advanced technical solutions for the maritime industry, including automation systems, navigation equipment, communication systems, and energy-efficient technologies. Our solutions are designed to enhance vessel performance and operational efficiency.</p>
-                            <p>Our team of engineers works closely with clients to provide customized solutions that address specific operational challenges and optimize vessel performance.</p>
                             <div class="product-features">
                                 <ul>
                                     <li><i class="fas fa-check"></i> Automation systems</li>
                                     <li><i class="fas fa-check"></i> Navigation equipment</li>
                                     <li><i class="fas fa-check"></i> Communication systems</li>
                                     <li><i class="fas fa-check"></i> Energy-efficient technologies</li>
-                                    <li><i class="fas fa-check"></i> Customized solutions</li>
-                                    <li><i class="fas fa-check"></i> Installation & training</li>
                                 </ul>
-                            </div>
-                            <div class="product-cta">
-                                <a href="#" class="btn btn-primary">Request Quote</a>
-                                <a href="#" class="btn btn-secondary">View Catalog</a>
                             </div>
                         </div>
                     </div>
@@ -926,7 +831,7 @@
             </div>
         </section>
         
-        <!-- 自动滚动图片区域 -->
+        <!-- 自动滚动图片区域 
         <section class="image-gallery-section">
             <div class="container">
                 <div class="gallery-title">
@@ -934,42 +839,13 @@
                     <p>Explore our comprehensive range of marine products and solutions</p>
                 </div>
                 <div class="image-gallery">
-                    <div class="gallery-track">
-                        <!-- 10张图片/色块 -->
-                        <div class="gallery-item" style="background: linear-gradient(45deg, #2050a4, #2b80ff);">
-                            <span>Engine Parts</span>
-                        </div>
-                        <div class="gallery-item" style="background: linear-gradient(45deg, #ff6b35, #ff8c5a);">
-                            <span>Deck Equipment</span>
-                        </div>
-                        <div class="gallery-item" style="background: linear-gradient(45deg, #34c759, #5cdb85);">
-                            <span>Navigation Systems</span>
-                        </div>
-                        <div class="gallery-item" style="background: linear-gradient(45deg, #5856d6, #7d7aff);">
-                            <span>Safety Gear</span>
-                        </div>
-                        <div class="gallery-item" style="background: linear-gradient(45deg, #ff2d55, #ff6384);">
-                            <span>Life-saving Appliances</span>
-                        </div>
-                        <div class="gallery-item" style="background: linear-gradient(45deg, #ff9500, #ffb143);">
-                            <span>Fire-fighting Equipment</span>
-                        </div>
-                        <div class="gallery-item" style="background: linear-gradient(45deg, #5ac8fa, #87ceeb);">
-                            <span>Automation Systems</span>
-                        </div>
-                        <div class="gallery-item" style="background: linear-gradient(45deg, #af52de, #c87ceb);">
-                            <span>Communication Systems</span>
-                        </div>
-                        <div class="gallery-item" style="background: linear-gradient(45deg, #ff3b30, #ff6961);">
-                            <span>Energy Solutions</span>
-                        </div>
-                        <div class="gallery-item" style="background: linear-gradient(45deg, #32d74b, #5cdb85);">
-                            <span>Technical Support</span>
-                        </div>
+                    <div class="gallery-track" id="galleryTrack">
+                         图片将在这里动态添加 
                     </div>
                 </div>
             </div>
         </section>
+        -->
     </main>
 
     <!-- 底部导航栏 -->
@@ -1005,7 +881,7 @@
                 <div class="footer-section">
                     <h3>Quick Links</h3>
                     <div class="footer-links">
-                        <a href="/">Home</a>
+                        <a href="/index-.html">Home</a>
                         <a href="/about-us.html">About Us</a>
                         <a href="/services.html">Our Services</a>
                         <a href="/products.html">Products</a>
@@ -1015,14 +891,14 @@
                 
                 <!-- 公司简介 -->
                 <div class="footer-section footer-about">
-                    <h3>About King Hitech</h3>
-                    <p>King Hitech Limited specializes in comprehensive marine services including ship supply, ship spares supply, ship repair, and dry docking services. With our headquarters in China and strategic locations worldwide, we provide professional 24/7 solutions to the maritime industry.</p>
+                    <h3>About King Hi-Tech</h3>
+                    <p>King Hi-Tech (Hong Kong) Ship Machine Equipment Co., Ltd. specializes in the supply, manufacturing, and repair of marine diesel engine parts. With strategic warehouses in Dalian and Shanghai, we provide reliable maritime solutions to clients worldwide.</p>
                 </div>
             </div>
             
             <!-- 版权信息 -->
             <div class="footer-bottom">
-                <p>&copy; 2024 King Hitech Limited. All rights reserved. | Professional Marine Solutions</p>
+                <p>&copy; 2024 King Hi-Tech Marine Equipment Co., Ltd. All rights reserved. | Professional Maritime Solutions</p>
             </div>
         </div>
     </footer>
@@ -1081,11 +957,118 @@
             // 图片加载错误处理
             document.querySelectorAll('img').forEach(img => {
                 img.addEventListener('error', function() {
-                    this.src = 'https://via.placeholder.com/500x300/2050a4/ffffff?text=King+Hitech';
-                    this.alt = 'King Hitech - Professional Maritime Services';
+                    this.src = 'https://via.placeholder.com/500x300/2050a4/ffffff?text=King+Hi-Tech';
+                    this.alt = 'King Hi-Tech - Professional Maritime Services';
                 });
             });
+            
+            // 图片循环滚动功能
+            initImageGallery();
         });
+
+        // 初始化图片画廊
+        function initImageGallery() {
+            const galleryTrack = document.getElementById('galleryTrack');
+            const galleryItems = [
+                {
+                    title: "Engine Parts",
+                    color: "linear-gradient(45deg, #2050a4, #2b80ff)",
+                    image: "https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                },
+                {
+                    title: "Component Manufacturing",
+                    color: "linear-gradient(45deg, #ff6b35, #ff8c5a)",
+                    image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                },
+                {
+                    title: "Technical Solutions",
+                    color: "linear-gradient(45deg, #34c759, #5cdb85)",
+                    image: "https://images.unsplash.com/photo-1558618666-6e6e624b8a9f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                },
+                {
+                    title: "Quality Assurance",
+                    color: "linear-gradient(45deg, #5856d6, #7d7aff)",
+                    image: "https://images.unsplash.com/photo-1566228015668-4c45ecef5e4c?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                },
+                {
+                    title: "Warehouse Network",
+                    color: "linear-gradient(45deg, #ff2d55, #ff6384)",
+                    image: "https://images.unsplash.com/photo-1569511163066-3a38d63ffd53?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                },
+                {
+                    title: "OEM Standards",
+                    color: "linear-gradient(45deg, #ff9500, #ffb143)",
+                    image: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                },
+                {
+                    title: "Global Network",
+                    color: "linear-gradient(45deg, #5ac8fa, #87ceeb)",
+                    image: "https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                },
+                {
+                    title: "24/7 Availability",
+                    color: "linear-gradient(45deg, #af52de, #c87ceb)",
+                    image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                }
+            ];
+
+            // 创建图片项
+            galleryItems.forEach(item => {
+                const galleryItem = document.createElement('div');
+                galleryItem.className = 'gallery-item';
+                galleryItem.style.background = item.color;
+                
+                const img = document.createElement('img');
+                img.src = item.image;
+                img.alt = item.title;
+                
+                const span = document.createElement('span');
+                span.textContent = item.title;
+                
+                galleryItem.appendChild(img);
+                galleryItem.appendChild(span);
+                galleryTrack.appendChild(galleryItem);
+            });
+
+            // 克隆第一组图片以实现无缝循环
+            const itemsToClone = galleryItems.slice(0, 4); // 克隆前4个
+            itemsToClone.forEach(item => {
+                const galleryItem = document.createElement('div');
+                galleryItem.className = 'gallery-item';
+                galleryItem.style.background = item.color;
+                
+                const img = document.createElement('img');
+                img.src = item.image;
+                img.alt = item.title;
+                
+                const span = document.createElement('span');
+                span.textContent = item.title;
+                
+                galleryItem.appendChild(img);
+                galleryItem.appendChild(span);
+                galleryTrack.appendChild(galleryItem);
+            });
+
+            // 设置动画
+            const trackWidth = galleryTrack.scrollWidth / 2;
+            let position = 0;
+            const speed = 1; // 调整速度，值越小越慢
+            
+            function animateGallery() {
+                position -= speed;
+                
+                // 当滚动到一半时，重置位置以实现无缝循环
+                if (position <= -trackWidth) {
+                    position = 0;
+                }
+                
+                galleryTrack.style.transform = `translateX(${position}px)`;
+                requestAnimationFrame(animateGallery);
+            }
+            
+            // 开始动画
+            animateGallery();
+        }
     </script>
 </body>
 </html>

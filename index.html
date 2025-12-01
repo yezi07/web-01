@@ -8,36 +8,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     
-    <!-- 网站图标 - 根据您的实际文件结构修正 -->
-    <!-- 主图标 -->
-    <link rel="shortcut icon" href="/my-favicon/favicon.ico" type="image/x-icon">
-    <link rel="icon" type="image/x-icon" href="/my-favicon/favicon.ico">
-    
-    <!-- 标准图标 -->
-    <link rel="icon" type="image/png" sizes="96x96" href="/my-favicon/favicon-96x96.png">
-    <link rel="icon" type="image/svg+xml" href="/my-favicon/favicon.svg">
-    
-    <!-- Apple Touch Icons - Safari必需 -->
-    <link rel="apple-touch-icon" href="/my-favicon/apple-touch-icon.png">
-    <link rel="apple-touch-icon" sizes="192x192" href="/my-favicon/web-app-manifest-192x192.png">
-    <link rel="apple-touch-icon" sizes="512x512" href="/my-favicon/web-app-manifest-512x512.png">
-    
-    <!-- Web App Manifest -->
-    <link rel="manifest" href="/my-favicon/site.webmanifest">
-    
-    <!-- Safari主题配置 -->
-    <meta name="theme-color" content="#2050a4">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="default">
-    <meta name="apple-mobile-web-app-title" content="King Hitech">
-    <meta name="format-detection" content="telephone=no">
-    
     <!-- 字体和图标 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     
     <style>
-        /* 基础样式和变量 - 与联系页面保持一致 */
+        /* 基础样式和变量 */
         :root {
             --primary-color: #2050a4;
             --secondary-color: #2b80ff;
@@ -97,7 +73,7 @@
             padding: 0 20px;
         }
         
-        /* 顶部导航栏 - 与联系页面保持一致 */
+        /* 顶部导航栏 */
         .header {
             background: var(--bg-light);
             box-shadow: var(--shadow-light);
@@ -242,7 +218,7 @@
         
         /* 主要内容区域 */
         .main-content {
-            margin-top: 120px;
+            margin-top: 100px;
             min-height: calc(100vh - 200px);
         }
         
@@ -264,7 +240,7 @@
             width: 100%;
             height: 100%;
             background: linear-gradient(rgba(32, 80, 164, 0.7), rgba(43, 128, 255, 0.7)), 
-                        url('https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') no-repeat center center;
+                         no-repeat center center;
             background-size: cover;
             z-index: -1;
         }
@@ -275,13 +251,71 @@
             max-width: 800px;
             padding: 0 20px;
             z-index: 1;
+            /* 将内容整体向上移动 */
+            margin-top: -60px;
+            /* 确保内容完全居中 */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
         }
         
+        /* 确保标题完全居中且完整显示 */
         .hero-content h1 {
             font-size: 3.5rem;
             margin-bottom: 20px;
             font-weight: 700;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            /* 确保标题完全显示并居中 */
+            white-space: nowrap;
+            overflow: visible;
+            text-overflow: unset;
+            /* 确保完全居中 */
+            text-align: center;
+            width: 100%;
+            display: block;
+            /* 防止任何可能的截断 */
+            max-width: 100%;
+            /* 按照要求设置margin-left */
+            margin-left: -170px;
+        }
+        
+        /* 响应式调整 */
+        @media (max-width: 1024px) {
+            .hero-content h1 {
+                font-size: 3rem;
+                /* 在大屏平板设备上调整margin-left */
+                margin-left: -120px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2.5rem;
+                /* 在移动设备上允许换行 */
+                white-space: normal;
+                /* 确保在移动设备上也能居中 */
+                text-align: center;
+                /* 在平板设备上调整margin-left */
+                margin-left: -90px;
+            }
+            
+            .hero-content {
+                margin-top: -40px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero-content h1 {
+                font-size: 2.2rem;
+                /* 在手机上调整margin-left */
+                margin-left: -45px;
+            }
+            
+            .hero-content {
+                margin-top: -30px;
+            }
         }
         
         .hero-content p {
@@ -416,6 +450,29 @@
             font-size: 1.1rem;
         }
         
+        /* 修改服务模块中的列表样式 - 只保留蓝色小圆点 */
+        .service-features {
+            margin: 20px 0;
+            padding-left: 0;
+            list-style: none;
+        }
+        
+        .service-features li {
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 25px;
+            color: #666;
+        }
+        
+        .service-features li:before {
+            content: "•";
+            color: var(--secondary-color);
+            font-size: 1.5rem;
+            position: absolute;
+            left: 0;
+            top: -5px;
+        }
+        
         /* 横向滚动图片区域 */
         .service-images {
             display: flex;
@@ -464,7 +521,7 @@
             transform: scale(1.05);
         }
         
-        /* 底部导航栏 - 与联系页面保持一致 */
+        /* 底部导航栏 */
         .footer {
             background: var(--bg-dark);
             color: var(--text-light);
@@ -772,18 +829,18 @@
         <div class="container">
             <div class="header-container">
                 <div class="logo">
-                    <a href="/">
+                    <a href="/index-.html">
                         <img src="/image/logo.jpg" alt="King Hitech">
                     </a>
                 </div>
                 
                 <!-- 桌面端导航 -->
                 <nav class="nav-desktop">
-                    <a href="/" class="active">Home</a>
+                    <a href="/index-.html" class="active">Home</a>
                     <a href="/about-us.html">About Us</a>
-                        <a href="/services.html">Our Services</a>
-                        <a href="/products.html">Products</a>
-                        <a href="/contact-us.html">Contact Us</a>
+                    <a href="/services.html">Our Services</a>
+                    <a href="/products.html">Products</a>
+                    <a href="/contact-us.html">Contact Us</a>
                 </nav>
                 
                 <!-- 移动端菜单切换 -->
@@ -796,7 +853,7 @@
             
             <!-- 移动端导航菜单 -->
             <nav class="nav-mobile" id="navMobile">
-                <a href="/" class="active">Home</a>
+                <a href="/index-.html" class="active">Home</a>
                 <a href="/about-us.html">About Us</a>
                 <a href="/services.html">Services</a>
                 <a href="/products.html">Products</a>
@@ -809,11 +866,13 @@
     <main class="main-content">
         <!-- 英雄区域 - 全屏大图 -->
         <section class="hero-section">
-            <div class="hero-background"></div>
+            <div class="hero-background">
+                <img src="/image/background3.jpg" alt="King Hitech">
+            </div>
             <div class="hero-content animate-fade-in">
-                <h1>Professional Maritime Services Worldwide</h1>
+                <h1>Your Definitive Maritime Solution</h1>
                 <p>Your trusted partner in ship spares supply and repair services. With over 20 years of experience, we provide comprehensive solutions for the maritime industry.</p>
-                <!-- 移除了按钮 -->
+                <a href="/contact-us.html" class="btn">Contact Us Today</a>
             </div>
         </section>
         
@@ -826,10 +885,10 @@
                         <p>King Hitech Limited is a leading provider of maritime services with headquarters in Hong Kong and strategic locations worldwide. We specialize in ship supply, ship spares supply, ship repair, and dry docking services.</p>
                         <p>Our team of experienced professionals is available 24/7 to ensure your vessels operate at peak efficiency. We understand the critical nature of maritime operations and are committed to delivering timely, reliable solutions.</p>
                         <p>With a global network of suppliers and partners, we can source and deliver high-quality marine equipment and spare parts to any port worldwide, ensuring minimal downtime for your operations.</p>
-                        <a href="/about" class="btn">Learn More</a>
+                        <a href="/about-us.html" class="btn">Learn More</a>
                     </div>
                     <div class="intro-image">
-                        
+                        <img src="/image/profilebackground.jpg" alt="King Hitech">
                     </div>
                 </div>
             </div>
@@ -844,80 +903,107 @@
                 </div>
                 
                 <div class="services-container">
-                    <!-- 服务模块 1 -->
+                    <!-- 服务模块 1: Engine Component Manufacturing & Parts Supply -->
                     <div class="service-module animate-slide-up">
                         <div class="service-content">
-                            <h3>Ship Supply & Spares</h3>
-                            <p>We provide a complete range of ship supplies and spare parts, ensuring your vessels have everything they need for smooth operations. Our global network allows us to source and deliver quality products efficiently.</p>
-                            <p>From engine parts to deck equipment, we offer reliable solutions with competitive pricing and fast delivery times. Our inventory includes genuine OEM parts and high-quality alternatives to meet various budgets and requirements.</p>
+                            <h3>Engine Component Manufacturing & Parts Supply</h3>
+                            <p>We professionally produce piston rods, piston heads, and core fuel/exhaust system components as authorized by licensed manufacturers and original factory parts. We strictly adhere to original factory standards and specifications, ensuring that every product delivers excellent performance and reliable quality, making it a trustworthy choice.
+                                </p>
+                            <p>Our strategically located warehouses in Dalian (North) and Shanghai (South) allow us to efficiently manage and distribute products globally, ensuring timely order delivery and consistent high-quality service.</p>
+                            <ul class="service-features">
+                                <li>Piston rods and piston heads manufacturing</li>
+                                <li>Core fuel/exhaust system components</li>
+                                <li>Authorized licensed & genuine parts</li>
+                                <li>Strategic warehouse locations</li>
+                            </ul>
                         </div>
                         <div class="service-images">
                             <div class="service-image">
-                                
+                                <img src="/image/background.jpg" alt="King Hitech">
                             </div>
                             <div class="service-image">
-                                
+                                <img src="/image/background4.jpg" alt="King Hitech">
                             </div>
                             <div class="service-image">
-                                
-                            </div>
-                            <div class="service-image">
-                                
-                            </div>
-                            <div class="service-image">
-                                
+                                <img src="/image/background9.jpg" alt="King Hitech">
                             </div>
                         </div>
                     </div>
                     
-                    <!-- 服务模块 2 -->
+                    <!-- 服务模块 2: Maintenance Services -->
                     <div class="service-module animate-slide-up">
                         <div class="service-content">
-                            <h3>Repair & Dry Docking</h3>
-                            <p>Our ship repair and dry docking services ensure your vessels remain in optimal condition. We work with certified technicians and use state-of-the-art equipment to deliver high-quality repairs.</p>
-                            <p>Whether it's routine maintenance or emergency repairs, our team is equipped to handle projects of any scale with precision and efficiency. Our facilities are equipped to accommodate vessels of various sizes and types.</p>
+                            <h3>Maintenance Services</h3>
+                            <p>King Hi-Tech's global maintenance and engineering team is committed to providing professional, efficient, and reliable technical services for marine power systems. Our core services include:</p>
+                            <ul class="service-features">
+                                <li>Main/auxiliary engine maintenance</li>
+                                <li>5-year major overhauls</li>
+                                <li>Electronic fuel injection engine repair (ME Engines, FLEX Engines)</li>
+                                <li>24/7 emergency troubleshooting</li>
+                            </ul>
+                            <p>Our service team consists of experienced technicians and professional assemblers with solid engineering capabilities and extensive field experience. We are committed to delivering high-quality, short-cycle, and cost-effective solutions.</p>
                         </div>
                         <div class="service-images">
                             <div class="service-image">
-                                
+                                <img src="/image/background7.jpg" alt="King Hitech">
                             </div>
                             <div class="service-image">
-                                
+                                <img src="/image/background8.jpg" alt="King Hitech">
                             </div>
                             <div class="service-image">
-                                
-                            </div>
-                            <div class="service-image">
-                                
-                            </div>
-                            <div class="service-image">
-                                
+                                <img src="/image/background1.jpg" alt="King Hitech">
                             </div>
                         </div>
                     </div>
                     
-                    <!-- 服务模块 3 -->
+                    <!-- 服务模块 3: Parts Inventory System -->
+                    <div class="service-module animate-slide-up">
+                        <div class="service-content">
+                            <h3>Parts Inventory System</h3>
+                            <p>Our strategically located warehouses in Dalian (North) and Shanghai (South) allow us to efficiently manage and distribute products globally, ensuring timely order delivery and consistent high-quality service.</p>
+                            <p>We maintain a comprehensive inventory of marine diesel engine parts, including piston heads with various models and specifications. Our inventory management system ensures that we can quickly respond to customer needs and minimize vessel downtime.</p>
+                            <ul class="service-features">
+                                <li>Dual-warehouse inventory system (Dalian & Shanghai)</li>
+                                <li>Efficient global distribution network</li>
+                                <li>Comprehensive parts inventory</li>
+                                <li>Quick response to customer needs</li>
+                            </ul>
+                        </div>
+                        <div class="service-images">
+                            <div class="service-image">
+                                <img src="/image/background5.jpg" alt="King Hitech">
+                            </div>
+                            <div class="service-image">
+                                <img src="/image/background12.jpg" alt="King Hitech">
+                            </div>
+                            <div class="service-image">
+                                <img src="/image/background13.jpg" alt="King Hitech">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 服务模块 4: Technical Support -->
                     <div class="service-module animate-slide-up">
                         <div class="service-content">
                             <h3>Technical Support</h3>
                             <p>Our technical support team provides expert assistance for all your maritime needs. From troubleshooting to technical consultations, we're here to help you overcome any operational challenges.</p>
-                            <p>With 24/7 availability and deep industry expertise, we ensure your vessels operate safely and efficiently at all times. Our engineers are available for on-site support when needed.</p>
+                            <p>With 24/7 availability and deep industry expertise, we ensure your vessels operate safely and efficiently at all times. Our engineers are available for on-site support when needed, providing comprehensive solutions throughout the equipment's entire lifecycle.</p>
+                            <ul class="service-features">
+                                <li>24/7 technical assistance</li>
+                                <li>Expert troubleshooting services</li>
+                                <li>On-site engineering support</li>
+                                <li>Comprehensive lifecycle solutions</li>
+                            </ul>
                         </div>
                         <div class="service-images">
                             <div class="service-image">
-                                
+                                <img src="/image/background6.jpg" alt="King Hitech">
                             </div>
                             <div class="service-image">
-                                
+                                <img src="/image/background10.jpg" alt="King Hitech">
                             </div>
                             <div class="service-image">
-                                
-                            </div>
-                            <div class="service-image">
-                                
-                            </div>
-                            <div class="service-image">
-                                
+                                <img src="/image/background11.jpg" alt="King Hitech">
                             </div>
                         </div>
                     </div>
@@ -959,7 +1045,7 @@
                 <div class="footer-section">
                     <h3>Quick Links</h3>
                     <div class="footer-links">
-                        <a href="/">Home</a>
+                        <a href="/index-.html">Home</a>
                         <a href="/about-us.html">About Us</a>
                         <a href="/services.html">Our Services</a>
                         <a href="/products.html">Products</a>
@@ -1038,6 +1124,29 @@
                     this.src = 'https://via.placeholder.com/500x300/2050a4/ffffff?text=King+Hitech';
                     this.alt = 'King Hitech - Professional Maritime Services';
                 });
+            });
+
+            // 滚动动画效果
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+
+            // 观察所有需要动画的元素
+            document.querySelectorAll('.animate-slide-up').forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(30px)';
+                el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(el);
             });
         });
     </script>
